@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Femi Precious">
+  <meta name="description" content="Making Calculator Visually available">
+  <meta name="keywords" content="Calculator, Visual Calculator">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="calculator2.jpeg">
+  <title>VSL limited</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background: linear-gradient(45deg, #d2001a, #7462ff, #23d5ab);
+      background-size: 300% 300%;
+      animation: color 12s ease-in-out infinite;
+    }
+    nav{
+      display: flex;
+      color: white;
+      background: linear-gradient(to left,  #7462ff, #24be9a85);
+      height: 60px;
+      place-content: center;
+    }
+   
+    .logo{
+      display: flex;
+      margin-left: 30px;
+      align-items: center;
+    }
+    .middle-nav{
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      margin-top: 10px;
+      align-items: center;
+    }
+    .hidden{
+      display: none;
+    }
+    .right-nav{
+      display: flex;
+      flex-shrink: 0;
+      margin-right: 6%;
+      align-items: center;
+    }
+    .login a{
+      color: white;
+      text-decoration: none;
+    }
+    .sign-in a{
+      color: #7462ff;
+      text-decoration: none;
+    }
+    .login{
+      font-weight: bold;
+      margin-left: 40px;
+      border: 1px solid lightblue;
+      border-radius: 30px;
+      padding: 10px 20px;
+      background-color:#7462ff;
+      cursor: pointer;
+    }
+    .sign-in{
+      border: 1px solid lightblue;
+      border-radius: 30px;
+      padding: 10px 20px;
+      background-color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .link{
+      color: white;
+      text-decoration: none;
+      margin-top: 10px;
+      margin-right: 15px;
+    }
+    .secret{
+      display: none;
+    }
+    @media screen and (max-width:800px) {
+      .middle-nav{
+        display: none;
+      }
+      .right-nav{
+        display: none;
+      }
+      .secret{
+        display: block;
+      }
+      nav{
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        height: max-content;
+      }
+    }
+    .header{
+      margin: auto;
+      width: 450px;
+      font-size: 2rem;
+      margin-top: 60px;
+      color: white;
+      font-weight: bold;
+    }
+    @keyframes color {
+      0%{
+        background-position: 0 50%;
+      }
+      50%{
+        background-position: 100% 50%;
+      }
+      100%{
+        background-position: 0 50%;
+      }
+    }
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .button{
+      margin-right: 250px;
+      background-color: #7462ffb4;
+      height: 40px;
+      width: 100px;
+      border-radius: 200px;
+      cursor: pointer;
+      position: relative;
+    }
+    .text{
+      position: absolute;
+      left: 110px;
+      top: 10px;
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+    }
+    .text2{
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .button::before{
+      position: absolute;
+      content: "";
+      background-color: white;
+      width: 35px;
+      height: 35px;
+      border-radius: 200px;
+      margin-left: 3px;
+      margin-top: 2px;
+    }
+    input:checked + .button{
+      background-color: #23d5ab85;
+    }
+    input:checked + .button::before{
+      transform: translateX(160%);
+    }
+    .input{
+      display: none;
+    }
+    @media screen and (max-width:600px) {
+      .header{
+        font-size: 1.5rem;
+        margin-left: 10px;
+      }
+      .text2{
+        margin-left: 30px;
+      }
+    }
+    .content{
+      margin: 30px;
+      border: 1px solid lightblue;
+      width: 250px;
+      height: 280px;
+      border-radius: 25px;
+      padding-top: 20px;
+      color: white;
+      background: linear-gradient(45deg, #d2001a,#7462ff, #23d5ab);
+      animation: color 12s ease-in-out infinite;
+      background-size: 300% 300%;
+      flex: 1;
+    }
+    .change{
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container2{
+      /* display: grid;
+      grid-template-columns: 265px 260px 265px;
+      margin: 10%; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media screen and (max-width:860px) {
+      .container2{
+        display: grid;
+        margin-right: 7%;
+        grid-template-columns: 270px 260px;
+      }
+    }
+    @media screen and (max-width:600px) {
+      .container2{
+        display: grid;
+        margin-left: 13%;
+        grid-template-columns: 1fr;
+      }
+    }
+    .checkmark{
+      color: white;
+    }
+    .data-content{
+      margin-left: 40px;
+      margin-bottom: 10px;
+    }
+    @keyframes color {
+      0%{
+        background-position: 0 50%;
+      }
+      50%{
+        background-position: 100% 50%;
+      }
+      100%{
+        background-position: 0 50%;
+      }
+    }
+    .hidden{
+      font-size: 35px;
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .hidden2{
+      display: flex; 
+      flex-direction: column; 
+      align-items:center;
+    }
+    .link2,
+    .link3{
+      margin-bottom: 10px;
+      color: white;
+      text-decoration: none;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="calculator2.jpeg" width="30px" height="30px">
+      <a href="" class="link">VLC</a>
+    </div>
+    <div class="secret">
+      <img src="hamburger-menu.svg" class="js-click hidden">
+    </div>
+    <div class="middle-nav">
+      <div><a href="Calculator.html" class="link">Home</a></div>
+      <div><a href="" class="link">Courses</a></div>
+      <div><a href="" class="link">Contact Us</a></div>
+      <div><a href="pricing.html" class="link">Pricing</a></div>
+      <div><a href="" class="link">About Us</a></div>
+    </div>
+    <div class="hidden2">
+      <div><a href="Calculator.html" class="link2">Home</a></div>
+      <div><a href="pricing.html" class="link3">Pricing</a></div>
+    </div>
+    <div class="right-nav">
+      <button class="sign-in"><a href="">Sign in</a></button>
+      <button class="login"><a href="">Login</a></button>
+    </div>
+  </nav>
+  <header class="header">
+    USE OUR VISUAL CALCULATOR AT THE BEST AFFORDABLE PRICE
+  </header>
+  <div class="container">
+    <label class="text2" for="switch">Monthly</label>
+    <input type="checkbox" id="switch" class="input">
+    <label for="switch" class="button">
+      <span class="text">Yearly</span>
+    </label>
+  </div>
+  <div class="container2">
+    <div class="content">
+      <div class="change switch">$5/Month</div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="change switch2">$10/Month</div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="change switch3">$15/Month</div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+      <div class="data-content">
+        <span class="checkmark">&check; Reliable network</span>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const input = document.querySelector('.input');
+  const button = document.querySelector('.button');
+  const switch1 = document.querySelectorAll('.switch');
+  const switch2 = document.querySelectorAll('.switch2');
+  const switch3 = document.querySelectorAll('.switch3');
+  button.addEventListener('click', ()=>{
+    switch1.forEach((switches)=>{
+      if(switches.innerHTML === '$5/Month'){
+      switches.innerHTML = '$50/Year'
+      }else if(switches.innerHTML ='$50/Year'){
+      switches.innerHTML = '$5/Month'
+      }
+    })
+    switch2.forEach((switches)=>{
+      if(switches.innerHTML === '$10/Month'){
+      switches.innerHTML = '$55/Year'
+      }else if(switches.innerHTML ='$55/Year'){
+      switches.innerHTML = '$10/Month'
+      }
+    })
+    switch3.forEach((switches)=>{
+      if(switches.innerHTML === '$15/Month'){
+      switches.innerHTML = '$60/Year'
+      }else if(switches.innerHTML ='$60/Year'){
+      switches.innerHTML = '$15/Month'
+      }
+    })
+  })
+  const navBar = document.querySelector('.js-click');
+  const hidden = document.querySelector('.hidden2');
+  var link2 = document.querySelector('.link2');
+  var link3 = document.querySelector('.link3');
+  navBar.addEventListener("click", ()=>{
+    if(link2.style.display === "none"){
+    link2.style.display = "block";
+      link3.style.display = "block";
+    }else{
+      link3.style.display = "none";
+      link2.style.display = "none";
+    }
+  })
+</script>
+</html>
