@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 body{
-  height: 50vh;
   font-family: "Inter", sans-serif;
   color: white;
 }
@@ -794,9 +793,6 @@ text-decoration: none; font-weight: 642.14;
     font-size: 12.84px;
   }
   .grid3{
-  /*   display: grid;
-    grid-template-columns: repeat(4,1fr);
-    padding: 120px 320px; */
     display: flex;
     text-align: center;
     justify-content: center;
@@ -1568,12 +1564,13 @@ text-decoration: none; font-weight: 642.14;
   }
   .section1{
     font-family: "Roboto", sans-serif;
-    display: flex;
+    display: block;
     justify-content: center;
     height: 441px;
     background: linear-gradient(0deg, #0D0C14, #0D0C14),
     radial-gradient(42.09% 62.94% at 68.82% 39.03%, #3cffeb33 0%, rgba(0, 0, 0, 0) 100%);
     filter: blur(9);
+    padding-right: 40px;
   }
   
   .phone{
@@ -1591,16 +1588,15 @@ text-decoration: none; font-weight: 642.14;
   .content{
     font-size: 20px;
     font-weight: 340.43;
-    width: 570px;
-    margin-top: 15px;
-    margin-left: 12%;
+    width: 200px;
+    margin: 20px;
   }
   .description{
-    width: 493.52px;
+    width: 203.52px;
     font-weight: 600.14;
-    font-size: 25.69px;
+    font-size: 8px;
     margin-top: 35px;
-    margin-left: 12%;
+    margin-left: 0;
   }
   .download{
     background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
@@ -1666,7 +1662,7 @@ text-decoration: none; font-weight: 642.14;
     margin-left: 13%;
   }
   .group{
-    border: 3px solid white;
+    border: 0px solid white;
     width: 198.5px;
     padding: 45px 0px;
     text-align: center;
@@ -1679,7 +1675,7 @@ text-decoration: none; font-weight: 642.14;
   }
   .group-image-container{
     border-radius: 35.125px;
-    border: 1px solid white;
+    border: 0px solid white;
     height: 72.5px;
     width: 72.5px;
     padding: 20px;
@@ -1969,13 +1965,12 @@ text-decoration: none; font-weight: 642.14;
   }
 }
 
-
-/* 
+ 
 @media screen and (max-width:500px) {
   .header{
     background-color: #1F1E28;
     display: grid;
-    grid-template-columns: 1fr 220px;
+    grid-template-columns: 130px 1fr;
     height: 90.3px;
     color: white;
     padding: 0 20px;
@@ -2047,7 +2042,7 @@ text-decoration: none; font-weight: 642.14;
     justify-content: center;
   }
   .section2-combine{
-    width: 596.25px;
+    width: fit-content;
     height: 182.37px;
     margin: 40px 10px 0px;
     text-align: center;
@@ -2060,28 +2055,30 @@ text-decoration: none; font-weight: 642.14;
     font-weight: 602.14;
     line-height: 43px;
     font-size: 25.69px;
+    margin: auto;
   }
   .section2-content{
-    width: 388.25px;
-    height: 101.82px;
     font-weight: 376.94;
     font-size: 15.35px;
-    line-height: 21.5px;
     padding: 0px;
-    margin-left: 14%;
+    margin-left: 4px;
+    width: fit-content;
+  }
+  .section2-contain{
+    width: fit-contents;
   }
   .grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-bottom: 0px;
-    row-gap: 30px;
-    margin-top: 50px;
-    width: 500px;
-    margin-left: 12%;
+    width: 200px;
+    row-gap: 10px;
+    margin-top: 100px;
+    margin-left: -22px;
   }
   .group{
     border: none;
-    width: 198.5px;
+    width: 180.5px;
     padding: 45px 0px;
     text-align: center;
     height: 163.3px;
@@ -2202,9 +2199,9 @@ text-decoration: none; font-weight: 642.14;
     height: 110.63px;
     border-radius: 64.4px;
     padding: 15px 20px;
-    /* background: linear-gradient(0deg, #FF5050, #FF5050),
+    background: linear-gradient(0deg, #FF5050, #FF5050),
     linear-gradient(136.12deg, rgba(255, 255, 255, 0.8) 30.98%, rgba(236, 0, 0, 0.8) 92.73%);
-     background: linear-gradient(0deg, #FF5050, #FF5050);
+    background: linear-gradient(0deg, #FF5050, #FF5050);
   
   }
   .section4{
@@ -2217,10 +2214,9 @@ text-decoration: none; font-weight: 642.14;
   }
   .section4-title{
     font-weight: 602.14;
-    font-size: 15.69px;
-    line-height: 43px;
+    font-size: 14px;
     color: black;
-    text-align: start;
+    margin-left: -15px;
   }
   .grid5{
     display: flex;
@@ -2230,6 +2226,7 @@ text-decoration: none; font-weight: 642.14;
   .grid6{
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
   .activate-button{
     background: linear-gradient(0deg, #5C9DFF, #5C9DFF),
@@ -2240,13 +2237,16 @@ text-decoration: none; font-weight: 642.14;
     border-radius: 25.52px;
     border: none;
     margin-left: 10px;
+    width: 170px;
     height: 45px;
-    min-width: 160px;
     padding: 0 12px;
     margin-top: -42px;
+    position: absolute;
+    top: -50px;
+    right: -40px;
   }
   .select-server-image{
-    margin-top: 42px;
+    margin-top: 82px;
   }
   .select-server-button{
     background: linear-gradient(0deg, #FFAD4D, #FFAD4D),
@@ -2256,10 +2256,10 @@ text-decoration: none; font-weight: 642.14;
     line-height: 34.4px;
     border-radius: 25.52px;
     border: none;
-    margin-left: 10px;
+    margin-left: 50px;
     height: 45px;
     font-size: 15.35px;
-    min-width: 160px;
+    width: 160px;
     padding: 0 12px;
   }
   .download-button{
@@ -2268,6 +2268,7 @@ text-decoration: none; font-weight: 642.14;
     font-weight: 582.14;
     font-size: 18.35px;
     border-radius: 25.52px;
+    width: 150px;
     height: 45px;
     font-size: 15.35px;
     margin-left: -38px;
@@ -2275,6 +2276,9 @@ text-decoration: none; font-weight: 642.14;
     width: 140px;
     padding: 0 12px;
     margin-top: -42px;
+    position: absolute;
+    top: -50px;
+    left: -10px;
   }
   .section5{
     background: linear-gradient(0deg, #0D0C14, #0D0C14),
@@ -2320,31 +2324,22 @@ text-decoration: none; font-weight: 642.14;
   .section5-content-title{
     font-weight: 602.14;
     font-size: 19.35px;
-    line-height: 34.4px;
-    margin-bottom: 10px;
-    width: 102%;
+    margin-bottom: 15px;
+    margin: auto;
+    width: 300px;
   }
   .laptop{
     width: 430.9px;
     height: 500.53px;
     display: none;
   }
-  .grid3{
-  /*   display: grid;
-    grid-template-columns: repeat(4,1fr);
-    padding: 120px 320px; 
-    display: flex;
-    text-align: center;
-    justify-content: start;
-    margin-top: 10px;
-    margin-left: 0px;
-  }
   .grid2{
-    display: grid;
-    grid-template-columns: 230px 1fr;
-    row-gap: 40px;
-    margin-left: 0px;
-    width: 520px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 0;
+    padding-top: 20px;
+    margin: auto;
   }
   .cover1{
     width: 200.9px;
@@ -2362,7 +2357,7 @@ text-decoration: none; font-weight: 642.14;
     margin-right: 12px;
   }
   .section6{
-    height: 460.5px;
+    height: 660.5px;
     padding-left: 15px;
     background: rgb(35,35,35);
     font-family: "Inter", sans-serif;
@@ -2396,9 +2391,8 @@ text-decoration: none; font-weight: 642.14;
   }
   .section7{
     background: rgba(13, 12, 20, 1);
-    height: 11.03px;
     text-align: center;
     padding: 20px;
     font-size: 14px;
   }
-} */
+}
