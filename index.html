@@ -21,7 +21,6 @@
       height: 50px;
       display: flex;
       justify-content: space-between;
-
       align-items: center;
       margin: 20px 100px;
       color: white;
@@ -36,7 +35,7 @@
         display: none;
       }
       nav{
-        margin: 20px 50px;
+        margin: 20px;
       }
     }
     .body{
@@ -157,6 +156,13 @@
       row-gap: 50px;
       } 
     }
+    @media screen and (max-width:560px) {
+      .skills{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      row-gap: 50px;
+      } 
+    }
     .image2{
       margin-left: 15px;
       height: 120px;
@@ -196,11 +202,6 @@
       color:  rgb(37, 140, 187); 
       font-size: 35px;
       padding: 10px 10px 5px;
-    }
-    @media screen and (max-width:600px){
-      .hidden{
-        right: 20%;
-      }
     }
     .social-flexy{
       display: flex;
