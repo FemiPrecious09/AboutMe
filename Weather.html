@@ -103,26 +103,26 @@
     <div class="search">
       <input type="text" placeholder="enter city name" spellcheck="false">
       <button>
-        <img src="../search.png" alt="">
+        <img src="search.png" alt="">
       </button>
     </div>
     <div class="error">
       <p>Invalid city name</p>
     </div>
     <div class="weather">
-      <img src="../IMAGES/rain.png" class="weather-icon">
+      <img src="IMAGES/rain.png" class="weather-icon">
       <h1 class="temp">22°c</h1>
       <h2 class="city">New York</h2>
       <div class="details">
         <div class="col">
-          <img src="../IMAGES/humidity.png" class="">
+          <img src="IMAGES/humidity.png" class="">
           <div>
             <p class="humidity">50%</p>
             <p>Humidity</p>
           </div>
         </div>
         <div class="col">
-          <img src="../IMAGES/wind.png" class="">
+          <img src="IMAGES/wind.png" class="">
           <div>
             <p class="wind">15 km/h</p>
             <p>Wind Speed</p>
@@ -152,15 +152,15 @@
       document.querySelector('.humidity').innerHTML = data.main.humidity + '%';
       document.querySelector('.wind').innerHTML = data.wind.speed + 'km/h';
       if(data.weather[0].main == 'Clouds'){
-        weatherIcon.src = "../IMAGES/clouds.png"
+        weatherIcon.src = "IMAGES/clouds.png"
       }else if(data.weather[0].main == 'Clesr'){
-        weatherIcon.src = "../IMAGES/clear.png"
+        weatherIcon.src = "IMAGES/clear.png"
       }else if(data.weather[0].main == 'Rain'){
-        weatherIcon.src = "../IMAGES/rain.png"
+        weatherIcon.src = "IMAGES/rain.png"
       }else if(data.weather[0].main == 'Drizzle'){
-        weatherIcon.src = "../IMAGES/drizzle.png"
+        weatherIcon.src = "IMAGES/drizzle.png"
       }else if(data.weather[0].main == 'Mist'){
-        weatherIcon.src = "../IMAGES/mist.png"
+        weatherIcon.src = "IMAGES/mist.png"
       }
       document.querySelector('.weather').style.display = "block";
       document.querySelector('.error').style.display = "none";
