@@ -46,7 +46,7 @@
       grid-template-columns:1fr 110px;
       place-content: center;
     }
-    img{
+    .img{
       height: 80px;
       margin-left: 100px;
     }
@@ -69,12 +69,12 @@
       transition: background-color 1s;
     }
     @media screen and (max-width:1100px) {
-     img{
+     .img{
       margin-left: 60px;
      }
     }
     @media screen and (max-width:800px) {
-     img{
+     .img{
       margin-left: 15px;
      }
     }
@@ -171,22 +171,50 @@
     }
     .image-section{
       display: flex;
-      min-width: 750vh;
-      max-width: 1000vh;
-     /*  overflow-x:scroll; */
-     /*  scroll-behavior: smooth;  */
+      width:900px;
+      overflow-x:scroll;
+      scrollbar-width: 150px;
+      scroll-behavior: smooth;
       align-items: center;
-      padding: 20px 20px 45px;
       scroll-snap-type:x mandatory;
       text-align: center;
-
+    }
+    .image-section div{
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(5,auto);
+      grid-gap: 8px;
+      padding: 10px;
+      flex: none;
+    }
+    .image-section::-webkit-scrollbar{
+      display: none;
+    }
+    .wrap{
+      position: relative;
+      margin-left: -35px;
+    }
+    #backBtn,#nextBtn{
+      width: 50px;
+      cursor: pointer;
+      margin: 40px;
+      font-size: 35px;
+      z-index: 1;
+    }
+    #backBtn{
+      position: absolute;
+      top: 35%;
+    }
+    #nextBtn{
+      position: absolute;
+      top: 35%;
+      right: 0;
     }
     .contain{
       position: relative;
     }
     .image{
-      scroll-snap-align: start;
-      width: 200px;
+      width: 100%;
       height: 260px;
       border-radius: 8px;
       margin: 10px 9px 10px 25px;
@@ -326,7 +354,7 @@
       <div class="group">
         <nav class="nav">
           <div class="left-nav">
-            <img src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" >
+            <img class="img" src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" >
           </div>
           <div class="right-nav">
             <button class="nav-button">Sign In</button>
@@ -367,50 +395,58 @@
       </div> 
     </section>
     <div class="sub-body">
-    <div style="padding-left: 30px;"> 
+    <div style="padding-left: 30px;" class="wrap">
+      <i class="fa-solid fa-caret-left" id="backBtn"></i> 
       <section class="image-section">
-        <div class="contain">
-          <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdvFNZbAdb02xUt5ocAovItIKL73oi0vrbI1jygF5a7VcldKCOpnbCSXwzS87ji7svRFfbTPV1CVPaKzeJyPAn6lsdVJgnUGmiQkCxq3Sv7aLp0f8aNIG9aosfhfJnWa07Kx2VZURxfU-Yn8iaIekL__GwBiPPuo-qiNjqdVwZrXKBQVUHzBnGkDGmdCblS9XRFPq7JOW3pjUiuOJPOgNurzfvzZXpftDIL0zuUIrLZ3tgvqc1GSUZkykBEty9EoWcfMKrPIgsFwPLYAyyO0aMmvkSlMOJlaXsP_n-X4-kZhaYDA2iK1PSOPFlkAjCIFguUTuLZDqvjubKLrXVWQUhU.webp?r=82f
-          "class="image">
-          <div class="number">1</div>
+        <div>
+          <div class="contain">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdvFNZbAdb02xUt5ocAovItIKL73oi0vrbI1jygF5a7VcldKCOpnbCSXwzS87ji7svRFfbTPV1CVPaKzeJyPAn6lsdVJgnUGmiQkCxq3Sv7aLp0f8aNIG9aosfhfJnWa07Kx2VZURxfU-Yn8iaIekL__GwBiPPuo-qiNjqdVwZrXKBQVUHzBnGkDGmdCblS9XRFPq7JOW3pjUiuOJPOgNurzfvzZXpftDIL0zuUIrLZ3tgvqc1GSUZkykBEty9EoWcfMKrPIgsFwPLYAyyO0aMmvkSlMOJlaXsP_n-X4-kZhaYDA2iK1PSOPFlkAjCIFguUTuLZDqvjubKLrXVWQUhU.webp?r=82f
+            "class="image">
+            <div class="number">1</div>
+          </div>
+          <div class="contain">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABV9jpsQLX2zCeHf8kcG_bvygGTvpJZhVXESRX0tZluERP850QQ5sWxFjQCszNxHK8mDSa27l6PljmWHQxSVlOq1_mpDiMa2gI-ad_bCxRKyR1dS0QotA47lrPRBKAzGuPBFrw0rQRy1f4vpYYydCRiikVNL0KmJ-f_MvpDLKEFXVAw-iTzwhEaUp8WAR9bjJWzmOFmTUnlRR6nIu5LInpekK6hIlsyvYwr75jlwdoxgH5y_uMkYj12uhjmIq-r9xDUVJhqd_vW2p3BhRlZrDSBeW_UTid8daQjLyNFkgCOSNmdhPzJ7nizQ7Ed01CMEXRhFBnP3Oa5xvSFfuqzp73qD6_fzJot1vug5XmWGuPNUSUtelOQ4.webp?r=c0a" class="image">
+            <div class="number">2</div>
+          </div>
+          <div class="contain">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYYVSegfyDB429U7_0VAdFVaQb8BN-RaoNzqc9fUog_2YgqNCuSFF-vk45NTrel8nDjerE5oB64Zv_aSbBqUVgv8HT0r-XYpz5-q9_ZuH8l9jiZxvHD-mDWTbi91huF4DaBDhT5ZnYD9B0YvKpi3mb26Zrl3DusLdg74BOGIE62C8GLXRpC_BoqKgaQTqWXGNY5hYY7OgZz6yUXDcfmwx8D9AJl9B4igCX1YQ-GtQwS07eLm-te27E1-MAZ3LJTvqPGhvWhEBrzG5SNvXC5tMbppqpLpYqgMAToJPCyxVVlPfsDyP7MVfop5gemw9P5CwCpI1qwLIdrdXksnfJfzpcHg1mmb4DsXqjyXVw7_8Alh1bG_148.webp?r=688" class="image">
+            <div class="number">3</div>
+          </div>
+          <div class="contain">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABbQhgMV8-ji5yrOGF3y0JL3DTMWGHX2QzZJAcwokcVZVe8x73L_WBLr9n0vSB2_zDq9CJMyh1fwPgo5bG0C1oNGFeAlSGPwxj5wwC63sKl1CcFJl-KdrputboBHcAXWikLwZGeTC9DkqeiLw3xaE9BqbwDY3AYijABTggYGz7pKwID70UMPiDlUIGi500aPZlJH_3vAhbQfqMWEVWnEMgQ2A8GRDOR7zMcMXgg1Y7ghPfwUxSD5ZVSeClDd98JAem34em4tu4XKD5fOVRouXD40I1GcbbngGyrqhkjYfMj_WRFqa2jABnWaEAGpPLcWHijqg_16sMvbz4eoqnwT4j5Yn6eCod62odirMSMYRMOnUrcxDG6E.webp?r=127" class="image">
+            <div class="number">4</div>
+          </div>
         </div>
-        <div class="contain">
-          <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABV9jpsQLX2zCeHf8kcG_bvygGTvpJZhVXESRX0tZluERP850QQ5sWxFjQCszNxHK8mDSa27l6PljmWHQxSVlOq1_mpDiMa2gI-ad_bCxRKyR1dS0QotA47lrPRBKAzGuPBFrw0rQRy1f4vpYYydCRiikVNL0KmJ-f_MvpDLKEFXVAw-iTzwhEaUp8WAR9bjJWzmOFmTUnlRR6nIu5LInpekK6hIlsyvYwr75jlwdoxgH5y_uMkYj12uhjmIq-r9xDUVJhqd_vW2p3BhRlZrDSBeW_UTid8daQjLyNFkgCOSNmdhPzJ7nizQ7Ed01CMEXRhFBnP3Oa5xvSFfuqzp73qD6_fzJot1vug5XmWGuPNUSUtelOQ4.webp?r=c0a" class="image">
-          <div class="number">2</div>
+        <div>
+          <div class="contain">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRPtXW7JNkZmJED8LzDYjNcG3k2oMdF-HVJOaSHAraay86nRcNkyp9S7PgPFlDIJ1yEcri1trC134K7HeKa9Q99umcH00poyemeco-BgfcCQFRhhoNEQHJSFVBYhNvm2Ye0elwE_X86tn78oXgOhDHRR0rieHT8Jv0c.webp?r=a33" class="image">
+            <div class="number">5</div>
+          </div>
+          <div class="contain">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcgn17Z8xiwYiRx6a3Z-j72R2lWXGYBOI0KJmZrpQg0IYgUkLbKJNsl7KTEzdppXQw2qsUHqQfAuurx3NnCZhSo5RGXW70-HgjtZ81Va4SIR6rcTXumDrgsdZPyDjZTUXZt_wAnsQeXe-r0YErbo8rFSmUU37pTnxzZn6jRlFicPINqMvw6q5g-nkBZFsEXJyqBmXKLmnUXEXkIMH8d45bpaDVXqNQ6rC3iW8gLMZ1ctD1SCOVgeJsEdbILsdDpRtI5DK89HdkcyRMlL0AkjfsCq-ScOwMIJhvQGQltQ51QeYiAbBv7aKti78CHwpEUWxMoQ04ZfBAoO6LgfCSudpoQ.webp?r=1e9" class="image">
+            <div class="number">6</div>
+          </div>
+          <div class="contain">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVndbwBLxBYhHr9zrTNMC_ryu5TLX0gKOuMwwN_HNUi_Seu9kz9RQ3BEI5lngatgkjoqtTRuevOHmy3RpGr23pFSciyhJsfVq5N9Xfx4hvILAhR7XXdq3Ji-ngCYitlsEm9r1OG_piLycRm2HtxIxum_2YfoJR8HEjqdPfskL37byADIbX3GgP0S3tVt34nSV-F7JG_euTZqeNiFefJSQ34RuC5-mGMBJXNW01s4-NnKaqYX7XFe34ygpYa1hgsnINXwY4idSzrOO8IiyBS1FDLt4NbWL_GQB5M0dAP-r_kyobIASy1K4Vog-wORJDsqLwF5gVpia0fefinPY3zkp6c.webp?r=f62" class="image">
+            <div class="number">7</div>
+          </div>
+          <div class="contain">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRoKw7Cj0qLX_QYGhAr03wTwjB72R5Ivos4DZpEzUBg43tD3Ig1G1A1TC1Vye8yJ2qI4gHuaBGSDhJvUpps-wqnU7rpuBJZGlnlxYCCTSuGn3PBU0crumQfsQXvqSn7Emiwgl2o_23qFvoSeH5kcxlRiWTUSaEDCAbQQHLxpnB0p5_0OFH7wXb4MyWKEOTcIjjNkx38VsJaB0EHzBjoMg3ggIW2Pw6ahTMnjyEuIGDLmkWBOva79U6XLljVh6Ic0KKFLMcyiAh_DAq-KjHyLvea_qxUwTGzoDi32YGCGvuOKK70LdUAWbRK-_dznehtiCxnj0wyZA53kLIPmIRx0B73BDNuBgznR2PB4igCI3N97qZO5hKM.webp?r=63a" class="image">
+            <div class="number">8</div>
+          </div>
         </div>
-        <div class="contain">
-          <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYYVSegfyDB429U7_0VAdFVaQb8BN-RaoNzqc9fUog_2YgqNCuSFF-vk45NTrel8nDjerE5oB64Zv_aSbBqUVgv8HT0r-XYpz5-q9_ZuH8l9jiZxvHD-mDWTbi91huF4DaBDhT5ZnYD9B0YvKpi3mb26Zrl3DusLdg74BOGIE62C8GLXRpC_BoqKgaQTqWXGNY5hYY7OgZz6yUXDcfmwx8D9AJl9B4igCX1YQ-GtQwS07eLm-te27E1-MAZ3LJTvqPGhvWhEBrzG5SNvXC5tMbppqpLpYqgMAToJPCyxVVlPfsDyP7MVfop5gemw9P5CwCpI1qwLIdrdXksnfJfzpcHg1mmb4DsXqjyXVw7_8Alh1bG_148.webp?r=688" class="image">
-          <div class="number">3</div>
+        <div>
+          <div class="contain">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdOvDgCQJFpzty-Hp4mmGa0DJpsANN9mLanrSlmTRDb0XnLyS6fXkZ9kXKdRbaruBYADycBowlcFY1s4c2z7cfU8HBAw6LfTpBkcCq8qQgbqlovVGM39M4kYtd7zp5SKEAJCGLVdlyRbeU5SG04wssc4H-8kj5RLrSkjPT-WZ1fUGlSOdYoa9oqJuMBiGH1xQSmBfXlxoLrm72MwTMWC_ytYlCsh8YjpdRGEN0DxPQOvZ4QLPjXHnLxtTUTwTKYDqywUBi2gJXuMJLIFTCmLVohA0fTDDf-T4frCbw1F5WHCOWW6mgy4-cYl.webp?r=7e5" class="image">
+            <div class="number">9</div>
+          </div>
+          <div class="contain">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABf0SGUcfLghKhIfjvbuPrKEA3PlY5e8a0jLCPt5YPkcTYinxOz7wH3w1jVrXOgr3AHqU6gUs_9PrCdDQWuv-Z7BN1E_msVdZTAStWD3dMeaKawErRo5rTb8_NLocgTYHdFgxgViITfNMdP77lOiLrpTvPcVA2Q2qBdZ9iLrDRZlYtaJLeQTs4wUJlFtk0tRHqvC9caBNI1CXWFzrXH_6wdjUChWG-apaY-uSI13Tc4d9vfSwC8nt9hxzaaG_8ou6J04ghe-1ni3umpWCVN5vG-touQ06ccI6eGRnBsfrNuZjydzmwSos6i_S.webp?r=fec" class="image">
+            <div class="number">10</div>
+          </div>
         </div>
-        <div class="contain">
-          <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABbQhgMV8-ji5yrOGF3y0JL3DTMWGHX2QzZJAcwokcVZVe8x73L_WBLr9n0vSB2_zDq9CJMyh1fwPgo5bG0C1oNGFeAlSGPwxj5wwC63sKl1CcFJl-KdrputboBHcAXWikLwZGeTC9DkqeiLw3xaE9BqbwDY3AYijABTggYGz7pKwID70UMPiDlUIGi500aPZlJH_3vAhbQfqMWEVWnEMgQ2A8GRDOR7zMcMXgg1Y7ghPfwUxSD5ZVSeClDd98JAem34em4tu4XKD5fOVRouXD40I1GcbbngGyrqhkjYfMj_WRFqa2jABnWaEAGpPLcWHijqg_16sMvbz4eoqnwT4j5Yn6eCod62odirMSMYRMOnUrcxDG6E.webp?r=127" class="image">
-          <div class="number">4</div>
-        </div>
-        <div class="contain">
-          <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRPtXW7JNkZmJED8LzDYjNcG3k2oMdF-HVJOaSHAraay86nRcNkyp9S7PgPFlDIJ1yEcri1trC134K7HeKa9Q99umcH00poyemeco-BgfcCQFRhhoNEQHJSFVBYhNvm2Ye0elwE_X86tn78oXgOhDHRR0rieHT8Jv0c.webp?r=a33" class="image">
-          <div class="number">5</div>
-        </div>
-        <div class="contain">
-          <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcgn17Z8xiwYiRx6a3Z-j72R2lWXGYBOI0KJmZrpQg0IYgUkLbKJNsl7KTEzdppXQw2qsUHqQfAuurx3NnCZhSo5RGXW70-HgjtZ81Va4SIR6rcTXumDrgsdZPyDjZTUXZt_wAnsQeXe-r0YErbo8rFSmUU37pTnxzZn6jRlFicPINqMvw6q5g-nkBZFsEXJyqBmXKLmnUXEXkIMH8d45bpaDVXqNQ6rC3iW8gLMZ1ctD1SCOVgeJsEdbILsdDpRtI5DK89HdkcyRMlL0AkjfsCq-ScOwMIJhvQGQltQ51QeYiAbBv7aKti78CHwpEUWxMoQ04ZfBAoO6LgfCSudpoQ.webp?r=1e9" class="image">
-          <div class="number">6</div>
-        </div>
-        <div class="contain">
-          <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVndbwBLxBYhHr9zrTNMC_ryu5TLX0gKOuMwwN_HNUi_Seu9kz9RQ3BEI5lngatgkjoqtTRuevOHmy3RpGr23pFSciyhJsfVq5N9Xfx4hvILAhR7XXdq3Ji-ngCYitlsEm9r1OG_piLycRm2HtxIxum_2YfoJR8HEjqdPfskL37byADIbX3GgP0S3tVt34nSV-F7JG_euTZqeNiFefJSQ34RuC5-mGMBJXNW01s4-NnKaqYX7XFe34ygpYa1hgsnINXwY4idSzrOO8IiyBS1FDLt4NbWL_GQB5M0dAP-r_kyobIASy1K4Vog-wORJDsqLwF5gVpia0fefinPY3zkp6c.webp?r=f62" class="image">
-          <div class="number">7</div>
-        </div>
-        <div class="contain">
-          <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRoKw7Cj0qLX_QYGhAr03wTwjB72R5Ivos4DZpEzUBg43tD3Ig1G1A1TC1Vye8yJ2qI4gHuaBGSDhJvUpps-wqnU7rpuBJZGlnlxYCCTSuGn3PBU0crumQfsQXvqSn7Emiwgl2o_23qFvoSeH5kcxlRiWTUSaEDCAbQQHLxpnB0p5_0OFH7wXb4MyWKEOTcIjjNkx38VsJaB0EHzBjoMg3ggIW2Pw6ahTMnjyEuIGDLmkWBOva79U6XLljVh6Ic0KKFLMcyiAh_DAq-KjHyLvea_qxUwTGzoDi32YGCGvuOKK70LdUAWbRK-_dznehtiCxnj0wyZA53kLIPmIRx0B73BDNuBgznR2PB4igCI3N97qZO5hKM.webp?r=63a" class="image">
-          <div class="number">8</div>
-        </div>
-        <div class="contain">
-          <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdOvDgCQJFpzty-Hp4mmGa0DJpsANN9mLanrSlmTRDb0XnLyS6fXkZ9kXKdRbaruBYADycBowlcFY1s4c2z7cfU8HBAw6LfTpBkcCq8qQgbqlovVGM39M4kYtd7zp5SKEAJCGLVdlyRbeU5SG04wssc4H-8kj5RLrSkjPT-WZ1fUGlSOdYoa9oqJuMBiGH1xQSmBfXlxoLrm72MwTMWC_ytYlCsh8YjpdRGEN0DxPQOvZ4QLPjXHnLxtTUTwTKYDqywUBi2gJXuMJLIFTCmLVohA0fTDDf-T4frCbw1F5WHCOWW6mgy4-cYl.webp?r=7e5" class="image">
-          <div class="number">9</div>
-        </div>
-        <div class="contain">
-          <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABf0SGUcfLghKhIfjvbuPrKEA3PlY5e8a0jLCPt5YPkcTYinxOz7wH3w1jVrXOgr3AHqU6gUs_9PrCdDQWuv-Z7BN1E_msVdZTAStWD3dMeaKawErRo5rTb8_NLocgTYHdFgxgViITfNMdP77lOiLrpTvPcVA2Q2qBdZ9iLrDRZlYtaJLeQTs4wUJlFtk0tRHqvC9caBNI1CXWFzrXH_6wdjUChWG-apaY-uSI13Tc4d9vfSwC8nt9hxzaaG_8ou6J04ghe-1ni3umpWCVN5vG-touQ06ccI6eGRnBsfrNuZjydzmwSos6i_S.webp?r=fec" class="image">
-          <div class="number">10</div>
-        </div>
-      </section>  
+      </section>
+      <i class="fa-solid fa-caret-right" id="nextBtn"></i>  
 <!--       <div class="uk-child-width-1-2@m" uk-grid>
         <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
           <div class="uk-slideshow-items">
@@ -643,5 +679,23 @@
   </div>
   </section>
 </section>  
+<script>
+  let scrollContainer = document.querySelector(".image-section");
+  let backBtn = document.getElementById("backBtn");
+  let nextBtn = document.getElementById("nextBtn");
+
+  scrollContainer.addEventListener("wheel", (evt)=>{
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+  });
+  nextBtn.addEventListener("click", ()=>{
+    scrollContainer.style.scrollBehaviour = "smooth";
+    scrollContainer.scrollLeft += 900;
+  })
+  backBtn.addEventListener("click", ()=>{
+    scrollContainer.style.scrollBehaviour = "smooth";
+    scrollContainer.scrollLeft -= 900;
+  })
+</script>
 </body>
 </html>

@@ -13,7 +13,7 @@
       background: #222;
     }
     .card{
-      width: 90%;
+      width: 100%;
       max-width: 470px;
       background: linear-gradient(135deg, #00feba, #5b548a);
       color: #fff;
@@ -26,7 +26,6 @@
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
     }
     .search input{
       border: 0;
@@ -37,7 +36,7 @@
       height: 60px;
       border-radius: 30px;
       flex: 1;
-      margin-right: 16px;
+      margin-right: 6px;
       font-size: 18px;
     }
     .search button{
@@ -45,12 +44,22 @@
       outline: 0;
       background: #ebfffc;
       border-radius: 50%;
+      padding: 12px;
       width: 60px;
       height: 60px;
       cursor: pointer;
     }
     .search button img{
-      width: 16px;
+      width: 20px;
+    }
+    @media screen and (max-width:600px) {
+      .search button{
+      padding: 12px;
+      width: 100px;
+    }
+    .search button img{
+      width: 18px;
+    }
     }
     .weather-icon{
       width: 170px;
