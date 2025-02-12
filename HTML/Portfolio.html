@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PortFolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      background: rgb(37, 140, 187);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 300% 300%;
+      color: lightcyan;
+    }
+    nav{
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 100px;
+      color: white;
+    }
+    .left-nav{
+      font-size: 2rem;
+      font-weight: 600;
+      margin-left: 80px;
+    }
+    .body{
+      display: flex;
+      justify-content: space-between;
+    }
+    @media screen and (max-width: 1100px){
+      .body{
+        display: block;
+      }
+    }
+    .content{
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+    .right-nav{
+      display: flex;
+      margin-right: 30px;
+    }
+    .link{
+      margin-right: 30px;
+      text-decoration: none;
+      color: white;
+    }
+    .footer{
+      position: relative;
+    }
+    .img{
+      border-radius: 60%;
+      height: 400px;
+      width: 400px;
+      margin: 20px 20px 0px;
+    }
+    .line{
+      border: 1px solid white;
+      width: 6%;
+      margin-left: 20%;
+      margin-top: 15px;
+      position: absolute;
+    }
+    .intro{
+      margin-left: 30%;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: lightcyan;
+    }
+    .aboutme{
+      margin-left: 30%;
+      font-size: 1.1rem;
+    }
+    .link-image{
+      width: 100%;
+      height: 350px;
+      margin-bottom: 15px;
+    }
+    .project{
+      margin: 100px 15px 15px;
+    }
+    .link-cover{
+      border: 1px solid rgb(25, 66, 112);
+      box-shadow: 1px 1px 30px  lightcyan inset;
+      margin: 10px;
+      border-radius: 10px;
+      padding: 15px;
+      background-color: rgb(25, 66, 112);
+      color:  lightcyan;
+      font-size: 1.3rem;
+    }
+    .link-group{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 30px;
+    }
+    @media screen and (max-width:910px){
+      .link-group{
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .link-cover{
+        padding: 15px;
+        width: 80%;
+        margin: auto;
+      }
+    }
+    .Skills{
+      margin: 100px 15px 15px;
+    }
+    .skills{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      row-gap: 50px;
+    }
+    @media screen and (max-width:660px) {
+      .skills{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      row-gap: 50px;
+      } 
+    }
+    .image2{
+      margin-left: 15px;
+      height: 120px;
+      width: 120px;
+      padding: 10px;
+      border: 1px solid lightblue;
+      border-radius: 50%;
+      background-color: white;
+    }
+    .resources{
+      margin-left: 20px;
+      font-size: 1.3rem;
+    }
+    .social-name{
+      vertical-align: middle;
+      margin-top: 30px;
+      margin-left: 10px;
+    }
+    .social{
+      display: flex;
+      margin-left: 30px;
+    }
+    .social img{
+      margin-top: 15px;
+    }
+    ul{
+      margin-left: 30px;
+    }
+    .hidden{
+      position: fixed; 
+      right: 0; 
+      bottom: 0; 
+      cursor: pointer;
+      border: 1px solid white;
+      background-color: white;
+      border-radius: 50%;
+      color:  rgb(37, 140, 187); 
+      font-size: 35px;
+      padding: 10px 10px 5px;
+    }
+    .social-flexy{
+      display: flex;
+      margin-right: 20px;
+    }
+    .media-name{
+      margin-top: 32px;
+    }
+  </style>
+</head class="container">
+<body>
+  <nav id="Top">
+    <div></div>
+    <div class="right-nav">
+      <div><a href="../HTML/Portfolio.html" class="link">About</a></div>
+      <div><a href="#Project" class="link">Projects</a></div>
+      <div><a href="#Contact" class="link">Contact</a></div>
+      <div><a href="#Skills" class="link">SKills</a></div>
+      <div><a href="#Resources" class="link">Resources</a></div>
+    </div>
+  </nav>
+  <div class="left-nav">Femi Precious</div>
+  <div class="body">
+    <div class="image"><img src="../IMAGES/Fineboy.jpg" alt="" class="img"></div>
+    <div class="content">Student at the University of Lagos situated in Nigeria, pursuing a Computer Engineering degree, which integrate Computer Science with Electrical and Electronics Engineering to develop new Technology.</div>
+  </div>
+  <div class="footer">
+    <div class="line"></div>
+    <div class="intro">Intro</div>
+    <div class="aboutme">I was born and raised in Ile-Ife,Osun State. I always aspire to change the world with inventions. I wanted to know how different things are made So I realized I am to be an Engineer. What made me choose Computer Engineering is the technicality and the problem it can solve. I have so many ideas to be implemented in my Company so watch out for  Visual Leaning Centre Company.</div>
+  </div>
+  <h2 id="Project" class="project">Project</h2>
+  <div class="hidden" id="scrollTopBtn">
+    <a href="#Top"><i class="fa-solid fa-arrow-up-wide-short fa-fade"></i></a>
+  </div>
+  <div class="flex">
+    <div class="link-group">
+      <div class="link-cover">
+        <a href="../HTML/Calculator.html" class="link-project"><img src="../IMAGES/Screenshot (16).png" alt="" class="link-image"></a>
+        <div>My calculator project is able to do basic calculations like addition,substraction,multiplication and even permutation and combination</div>
+      </div>
+      <div class="link-cover">
+        <a href="../HTML/QRCode.html" class="link-project"><img src="../IMAGES/Screenshot (9).png" alt="" class="link-image"></a>
+        <div>This project was actually from youtube. I just wanted to know how QRcode were being used so I just learnt it. One of the things I learnt from this project is the "API". Although, I have little idea of what an API actually does but I believe that as I continue to use it, I will get better.</div>
+      </div>
+      <div class="link-cover">
+        <a href="../HTML/Weather.html" class="link-project"><img src="../IMAGES/Screenshot (10).png" alt="" class="link-image"></a>
+        <div>This is also a youtube project. The lesson from this project is how Javascipt can be applied. This project make it possible for me to check the weather conditon in any country,city or state at any particular time</div>
+      </div>
+      <div class="link-cover">
+        <a href="../HTML/X.html" class="link-project"><img src="../IMAGES/Screenshot (11).png" alt="" class="link-image"></a>
+        <div>X formerly called twitter is an interesting social media platform. This project was done with both bootstrap and tailwind. While doing this project, I wanted to give up especially the m,odal that appears when either the sign in or login is clicked. That is really stressful.</div>
+      </div>
+      <div class="link-cover">
+        <a href="../HTML/FacebookBootstrap.html" class="link-project"><img src="../IMAGES/Screenshot (12).png" alt="" class="link-image"></a>
+        <div>This Project was done using bootstrap without having to code css. It was very easy to do but it requires critical thinking.</div>
+      </div>
+      <div class="link-cover">
+        <a href="../HTML/Netflix.html" class="link-project"><img src="../IMAGES/Screenshot (13).png" alt="" class="link-image"></a>
+        <div>One of the most challenging projects. Thi stook me like 7days to finish. As simple as it looks, It is not easy. I tried to use Uikit to solve the slideshow problem but i couldn't. It was so stressful</div>
+      </div>
+      <div class="link-cover">
+        <a href="../HTML/Fagaruya2.html" class="link-project"><img src="../IMAGES/Screenshot (14).png" alt="" class="link-image"></a>
+        <div>This was pretty easy to code because i used Bootstrap. You might think Bootstrap makes coding easier which I accept but Bootstrap makes you lazy to code or even think when it comes to Solving Javascript Problems. I advice you use CSS and if you don't I will advice that you understand what you're doing and how you can do it with css.</div>
+      </div>
+      <div class="link-cover">
+        <a href="../HTML/mega touge.html" class="link-project"><img src="../IMAGES/Screenshot (15).png" alt="" class="link-image"></a>
+        <div>A very challenging Project. I did everything with css even the media screen. The html code wasn't the problem but the css. Not that it was hard but it took time and also requires mental strength.</div>
+      </div>
+    </div>
+  </div>
+  <h2 id="Skills" class="Skills">Skills</h2>
+  <div class="skills">
+    <div>
+      <img src="../IMAGES/HTML-removebg-preview.png" class="image2">
+    </div>
+    <div>
+      <img src="../IMAGES/Css-removebg-preview.png" class="image2">
+    </div>
+    <div>
+      <img src="../IMAGES/JS2-removebg-preview.png" class="image2">
+    </div>
+    <div>
+      <img src="../IMAGES/Tail-removebg-preview.png" class="image2">
+    </div>
+    <div>
+      <img src="../IMAGES/Ui-removebg-preview.png" class="image2">
+    </div>
+    <div>
+      <img src="../IMAGES/Infinite-removebg-preview.png" class="image2">
+    </div>
+    <div>
+      <img src="../IMAGES/Git-removebg-preview.png" class="image2">
+    </div>
+  </div>
+  <h2 id="Contact" class="Skills">Contact</h2>
+  <div>You can contact me on any of my social media platform if you need any training on any of the skills I've acquired over the years.</div>
+  <div class="social-flex">
+    <div class="social">
+      <div class="social-flexy">
+        <a href=""><img src="../IMAGES/Ellipse 340.png"></a>
+        <div class="social-name">LinkedIn:</div>
+      </div>
+      <div class="media-name">Femi Precious</div>
+    </div>
+    <div class="social">
+      <div class="social-flexy">
+        <a href=""><img src="../IMAGES/Facebook.png" style="width: 38px;"></a>
+        <div class="social-name">Facebook:</div>
+      </div>
+      <div class="media-name"></div>
+    </div>
+    <div class="social">
+      <div class="social-flexy">
+        <a href=""><img src="../IMAGES/Ellipse 339.png"></a>
+        <div class="social-name">X:</div>
+      </div>
+      <div class="media-name">femiprecious365</div>
+    </div>
+    <div class="social">
+      <div class="social-flexy">
+        <a href=""><img src="../IMAGES/Ellipse 341.png"></a>
+        <div class="social-name">Instagram:</div>
+      </div>
+      <div class="media-name">Oyetade Femi Precious</div>
+    </div> 
+  </div>
+  <h2 id="Resources" class="Skills">Resources</h2>
+  <div class="resources">
+    <div>Acquiring these Skills has been very challenging</div>
+    <div>Below are some of the website I'll advice you to checkout if you intend to learn</div>
+    <div class="text">For Html,Css and Javascript</div>
+    <ul>
+      <li>
+        <a href="https://www.w3schools.com/">W3Schools</a>
+      </li>
+    </ul>
+    <div class="text">To make Css eaiser use:</div>
+    <ul>
+      <li>
+        <a href="https://tailwindcss.com/">Tailwind</a>
+      </li>
+      <li>
+        <a href="https://getuikit.com/">Uikit</a>
+      </li>
+      <li>
+        <a href="https://www.w3schools.com/Bootstrap">Bootstrap</a>
+      </li>
+    </ul> 
+    <div>Also make sure you check out some youtube videos to stay Updated.</div>
+  </div>
+<script>
+  /* var hidden = document.querySelector('.hidden');
+  if(document.getElementsByClassName('container').style.height = "150vh"){
+    hidden.style.display = "block";
+    console.log('Yes')
+  }else {
+    hidden.style.display = "none";
+    console.log('No')
+  } */
+  // When the user scrolls down 100vh from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+  }
+
+</script> 
+</body> 
+</html>

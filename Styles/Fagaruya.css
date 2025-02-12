@@ -1,0 +1,40 @@
+.search-icon{
+  height: 25px;
+}
+.cardy{
+  margin-top: 50px; 
+  margin-bottom: 40px; 
+  color: rgba(47, 50, 125, 1);
+}
+.card2{
+  box-shadow: 6px 5px 8px whitesmoke;
+  border-radius: 20px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card3{
+  color: rgba(105, 105, 132, 1);
+}
+.line{
+  content: "";
+  border: .8px solid gray;
+}
+button{
+  font-weight: bold;
+}
+.ellipse{
+  border: 1px solid white;
+  border-radius: 40px;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  top: -11%; 
+  left: 38%;
+  position: absolute;
+}
+
+
+
+

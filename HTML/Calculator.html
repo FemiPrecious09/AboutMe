@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="shortcut icon" href="../calculator2.jpeg" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+     *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background: linear-gradient(45deg, #d2001a, #7462ff, #23d5ab);
+      background-size: 300% 300%;
+      animation: color 12s ease-in-out infinite;
+    }
+    nav{
+      display: flex;
+      color: white;
+      background: linear-gradient(to left,  #7462ff, #24be9a85);
+      height: 60px;
+      place-content: center;
+    }
+   
+    .logo{
+      display: flex;
+      margin-left: 30px;
+      align-items: center;
+    }
+    .middle-nav{
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      margin-top: 10px;
+      align-items: center;
+    }
+    .hidden{
+      display: none;
+    }
+    .right-nav{
+      display: flex;
+      flex-shrink: 0;
+      margin-right: 6%;
+      align-items: center;
+    }
+    .login a{
+      color: white;
+      text-decoration: none;
+    }
+    .sign-in a{
+      color: #7462ff;
+      text-decoration: none;
+    }
+    .login{
+      font-weight: bold;
+      margin-left: 40px;
+      border: 1px solid lightblue;
+      border-radius: 30px;
+      padding: 10px 20px;
+      background-color:#7462ff;
+      cursor: pointer;
+    }
+    .sign-in{
+      border: 1px solid lightblue;
+      border-radius: 30px;
+      padding: 10px 20px;
+      background-color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .link{
+      color: white;
+      text-decoration: none;
+      margin-top: 10px;
+      margin-right: 15px;
+    }
+    .secret{
+      display: none;
+    }
+    @media screen and (max-width:800px) {
+      .middle-nav{
+        display: none;
+      }
+      .right-nav{
+        display: none;
+      }
+      .secret{
+        display: block;
+      }
+      nav{
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        height:max-content;
+      }
+    }
+    .header{
+      margin: auto;
+      width: 450px;
+      font-size: 2rem;
+      margin-top: 60px;
+      color: white;
+      font-weight: bold;
+    }
+    @keyframes color {
+      0%{
+        background-position: 0 50%;
+      }
+      50%{
+        background-position: 100% 50%;
+      }
+      100%{
+        background-position: 0 50%;
+      }
+    }
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .button{
+      margin-right: 250px;
+      background-color: #7462ffb4;
+      height: 40px;
+      width: 100px;
+      border-radius: 200px;
+      cursor: pointer;
+      position: relative;
+    }
+    .text{
+      position: absolute;
+      left: 110px;
+      top: 10px;
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+    }
+    .text2{
+      font-size: 1.5rem;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .button::before{
+      position: absolute;
+      content: "";
+      background-color: white;
+      width: 35px;
+      height: 35px;
+      border-radius: 200px;
+      margin-left: 3px;
+      margin-top: 2px;
+    }
+    input:checked + .button{
+      background-color: #23d5ab85;
+    }
+    input:checked + .button::before{
+      transform: translateX(160%);
+    }
+    .input{
+      display: none;
+    }
+    @media screen and (max-width:600px) {
+      .header{
+        font-size: 1.5rem;
+        margin-left: 10px;
+      }
+      .text2{
+        margin-left: 30px;
+      }
+    }
+    .content{
+      margin: 30px;
+      border: 1px solid lightblue;
+      width: 250px;
+      height: 280px;
+      border-radius: 25px;
+      padding-top: 20px;
+      color: white;
+      background: linear-gradient(45deg, #d2001a,#7462ff, #23d5ab);
+      animation: color 12s ease-in-out infinite;
+      background-size: 300% 300%;
+      flex: 1;
+    }
+    .change{
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .container2{
+      /* display: grid;
+      grid-template-columns: 265px 260px 265px;
+      margin: 10%; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media screen and (max-width:860px) {
+      .container2{
+        display: grid;
+        margin-right: 7%;
+        grid-template-columns: 270px 260px;
+      }
+    }
+    @media screen and (max-width:600px) {
+      .container2{
+        display: grid;
+        margin-left: 13%;
+        grid-template-columns: 1fr;
+      }
+    }
+    .checkmark{
+      color: white;
+    }
+    .data-content{
+      margin-left: 40px;
+      margin-bottom: 10px;
+    }
+    @keyframes color {
+      0%{
+        background-position: 0 50%;
+      }
+      50%{
+        background-position: 100% 50%;
+      }
+      100%{
+        background-position: 0 50%;
+      }
+    }
+    .hidden{
+      font-size: 35px;
+      margin-right: 20px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .hidden2{
+      display: flex; 
+      flex-direction: column; 
+      align-items:center;
+    }
+    .link2,
+    .link3{
+      margin-bottom: 10px;
+      color: white;
+      text-decoration: none;
+      display: none;
+    }
+  </style>
+</head>
+<body class="pb-5">
+  <nav>
+    <div class="logo">
+      <img src="../calculator2.jpeg" width="30px" height="30px">
+      <a href="" class="link">VLC</a>
+    </div>
+    <div class="secret">
+      <img src="../hamburger-menu.svg" class="js-click" style="height: 30px; cursor: pointer;">
+    </div>
+    <div class="middle-nav">
+      <div><a href="Calculator.html" class="link">Home</a></div>
+      <div><a href="" class="link">Courses</a></div>
+      <div><a href="" class="link">Contact Us</a></div>
+      <div><a href="pricing.html" class="link">Pricing</a></div>
+      <div><a href="" class="link">About Us</a></div>
+    </div>
+    <div class="hidden2">
+      <div><a href="Calculator.html" class="link2">Home</a></div>
+      <div><a href="pricing.html" class="link3">Pricing</a></div>
+    </div>
+    <div class="right-nav">
+      <button class="sign-in"><a href="">Sign in</a></button>
+      <button class="login"><a href="">Login</a></button>
+    </div>
+  </nav>
+  <div class="border border-slate-500 w-72 m-auto bg-slate-400 rounded-lg my-12">
+    <div class="border border-slate-500 h-12 mt-3 mx-3 p-4 bg-slate-100 appear-js rounded-lg"></div>
+    <div class="border border-slate-500 h-92 my-1 mx-3 mb-3 rounded-lg">
+      <div class="text-end">
+        <button class="bg-red-300 rounded-md p-2 mr-4 my-2 on-js">
+          <!-- <div class="text-sm">ON</div>
+          <div class="text-sm">OFF</div> -->ON
+        </button>
+      </div>
+      <div class="grid grid-cols-4">
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 m-2 square-js px-3">x<sup>2</sup></button>
+        </div>  
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 m-2 sqrt-js px-4">√</button>
+        </div>  
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 m-2 pi-js px-4">π</button>
+        </div>  
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 m-2 permutation-js px-3"><sup>n</sup>P<sub>r</sub></button>
+        </div>  
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 m-2 combination-js px-3"><sup>n</sup>C<sub>r</sub></button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 m-2 sine-js">Sin</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 m-2 cos-js">Cos</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 m-2 tan-js">Tan</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 nine-js">9</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 eight-js">8</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 seven-js">7</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 six-js">6</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 five-js">5</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 four-js">4</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 three-js">3</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 two-js">2</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 one-js">1</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 zero-js">0</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 dot-js">.</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 plus-js">+</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 minus-js">-</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 divide-js">/</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 multiply-js">X</button>
+        </div>
+        <div class="">
+          <button class="bg-slate-200 rounded-md p-2 px-4 m-2 equal-to-js">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let calculator = '';
+    const On =document.querySelector('.on-js');
+    const square = document.querySelector(".square-js");
+    const sqrt = document.querySelector(".sqrt-js");
+    const permutation = document.querySelector(".permutation-js");
+    const combination = document.querySelector(".combination-js");
+    const sine = document.querySelector(".sine-js");
+    const cos = document.querySelector(".cos-js");
+    const tan = document.querySelector(".tan-js");
+    const nine = document.querySelector(".nine-js");
+    const eight = document.querySelector(".eight-js");
+    const seven = document.querySelector(".seven-js");
+    const six = document.querySelector(".six-js");
+    const five = document.querySelector(".five-js");
+    const four = document.querySelector(".four-js");
+    const three = document.querySelector(".three-js");
+    const two = document.querySelector(".two-js");
+    const one = document.querySelector(".one-js");
+    const zero = document.querySelector(".zero-js");
+    const plus = document.querySelector(".plus-js");
+    const minus = document.querySelector(".minus-js");
+    const divide = document.querySelector(".divide-js");
+    const multiply = document.querySelector(".multiply-js");
+    const equal= document.querySelector(".equal-to-js");
+    const Pi = document.querySelector(".pi-js");
+    const visible = document.querySelector('.appear-js');
+    const dot = document.querySelector('.dot-js');
+
+    
+    On.addEventListener('click',()=>{
+      calculator = '';
+      visible.innerHTML = `${calculator}`
+    })
+    square.addEventListener('click',()=>{
+      calculator += "<sup>2</sup>";
+      visible.innerHTML = `${calculator}`
+    })
+    sqrt.addEventListener('click',()=>{
+      calculator += "√";
+      visible.innerHTML = `${calculator}`;
+    })
+    Pi.addEventListener('click',()=>{
+      calculator += "π"      
+      visible.innerHTML = `${calculator}`
+    })
+    permutation.addEventListener('click',()=>{
+      calculator += "P";
+      visible.innerHTML = `${calculator}`
+    })
+    combination.addEventListener('click',()=>{
+      calculator += "C";
+      visible.innerHTML = `${calculator}`
+    })
+    sine.addEventListener('click',()=>{
+      calculator += "sin(";
+      visible.innerHTML = `${calculator}`
+    })
+    cos.addEventListener('click',()=>{
+      calculator += "cos(";
+      visible.innerHTML = `${calculator}`
+    })
+    tan.addEventListener('click',()=>{
+      calculator += "tan(";
+      visible.innerHTML = `${calculator}`
+    })
+    nine.addEventListener('click',()=>{
+      calculator += "9";
+      visible.innerHTML = `${calculator}`
+    })
+    eight.addEventListener('click',()=>{
+      calculator += "8";
+      visible.innerHTML = `${calculator}`
+    })
+    dot.addEventListener('click',()=>{
+      calculator += ".";
+      visible.innerHTML = `${calculator}`
+    })
+    seven.addEventListener('click',()=>{
+      calculator += "7";
+      visible.innerHTML = `${calculator}`
+    })
+    six.addEventListener('click',()=>{
+      calculator += "6";
+      visible.innerHTML = `${calculator}`
+    })
+    five.addEventListener('click',()=>{
+      calculator += "5";
+      visible.innerHTML = `${calculator}`
+    })
+    four.addEventListener('click',()=>{
+      calculator += "4";
+      visible.innerHTML = `${calculator}`
+    })
+    three.addEventListener('click',()=>{
+      calculator += "3";
+      visible.innerHTML = `${calculator}`
+    })
+    two.addEventListener('click',()=>{
+      calculator += "2";
+      visible.innerHTML = `${calculator}`
+    })
+    one.addEventListener('click',()=>{
+      calculator += "1";
+      visible.innerHTML = `${calculator}`
+    })
+    zero.addEventListener('click',()=>{
+      calculator += "0";
+      visible.innerHTML = `${calculator}`
+    })
+    plus.addEventListener('click',()=>{
+      calculator += "+";
+      visible.innerHTML = `${calculator}`
+    })
+    minus.addEventListener('click',()=>{
+      calculator += "-";
+      visible.innerHTML = `${calculator}`
+    })
+    divide.addEventListener('click',()=>{
+      calculator += "/";
+      visible.innerHTML = `${calculator}`
+    })
+    multiply.addEventListener('click',()=>{
+      calculator += '*';
+      visible.innerHTML = `${calculator}`
+    })
+    equal.addEventListener('click',()=>{
+      var Pie = Math.PI/180;
+      if(visible.innerHTML.includes('√')){
+        calculator = Math.sqrt(calculator.replace('√',''));
+      }else if(visible.innerHTML.includes('π')){
+        calculator = Math.PI
+      }else if(visible.innerHTML.includes('<sup>2</sup>')){
+        calculator = Math.pow(calculator.replace('<sup>2</sup>',''),2);
+      }else if(visible.innerHTML.includes('sin(')){
+        calculator =(Math.sin(Pie*(calculator.replace('sin(','')))).toFixed(3);
+      }else if(visible.innerHTML.includes('cos(')){
+        calculator = (Math.cos(Pie*(calculator.replace('cos(','')))).toFixed(3);
+      }else if(visible.innerHTML.includes('tan(')){
+        calculator = (Math.tan(Pie*(calculator.replace('tan(','')))).toFixed(3);
+      }else if(visible.innerHTML.includes('P')){
+        removeP =(calculator.replace('P',''));
+        let calculatorArray= [];
+        calculatorArray+=removeP;
+        let n = calculatorArray[0]
+        let r = calculatorArray[1]
+        let d = Number(n)-Number(r);
+        function factorial(num){
+          let total = 1;
+          number=Number(num);
+          for (let i = number; i > 1; i--) {
+            total *= i; 
+          }
+          return total;
+        }
+        console.log(n)
+        console.log(r)
+        console.log(d)
+        const top = factorial(n);
+        const down = factorial(d);
+        calculator = top/down;
+      }else if(visible.innerHTML.includes('C')){
+        removeC =(calculator.replace('C',''));
+        let calculatorArray= [];
+        calculatorArray+=removeC;
+        let n = calculatorArray[0]
+        let r = calculatorArray[1]
+        let d = Number(n)-Number(r);
+        function factorial(num){
+          let total = 1;
+          number=Number(num);
+          for (let i = number; i > 1; i--) {
+            total *= i; 
+          }
+          return total;
+        }
+        const top = factorial(n);
+        const down = factorial(d);
+        const downward = factorial(r)
+        calculator = top/(down*downward);
+      }else{
+        calculator = eval(calculator);
+      }
+      visible.innerHTML = `${calculator}`
+    })
+    const navBar = document.querySelector('.js-click');
+    const hidden = document.querySelector('.hidden2');
+    var link2 = document.querySelector('.link2');
+    var link3 = document.querySelector('.link3');
+    navBar.addEventListener("click", ()=>{
+      if(link2.style.display === "none"){
+        link2.style.display = "block";
+        link3.style.display = "block";
+      }else{
+        link3.style.display = "none";
+        link2.style.display = "none";
+      }
+    })
+  </script>
+</body>
+</html>

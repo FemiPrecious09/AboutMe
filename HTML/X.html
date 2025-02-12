@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Femi Precious">
+  <meta name="description" content="Connect with people around the world">
+  <meta name="keywords" content="X, twitter, social media">
+  <link rel="shortcut icon" href="../X.png" type="favicon">
+  <title>X</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          },
+          fontSize:{
+            femi: '10px',
+            '15':'13px'
+          },
+          gridTemplateColumns:{
+            min: '150px,1fr',
+          },
+          width:{
+            '140':'28rem',
+            '130': '24rem'
+          },
+          borderWidth:{
+            '1':'1px'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    option{
+      background-color: white;
+      color: black;
+    }
+    .label{
+      opacity: 0;
+    }
+    input:focus::-webkit-input-placeholder{
+      opacity: 0;
+    }
+  </style>
+</head>  
+<body class="bg-black pt-3">  
+  <div class="flex lg:flex-row md:flex-row justify-between flex-col items-center">
+    <div class="lg:ml-24 md:ml-24">
+      <img src="../X_logo.jpg" alt="" class="lg:w-96 lg:h-96 lg:my-20 md:w-96 md:h-96 md:my-10 w-20 h-20 ">
+    </div>
+    <div class="text-slate-200 lg:my-20 md:my-20 lg:mr-16 m-auto" style="margin-left:6%;">
+      <p class="text-4xl font-bold">Happening now</p>
+      <p class="text-3xl font-bold my-10">Join today.</p>
+      <a href="" class="rounded-full bg-white flex w-60 p-1 justify-center hover:no-underline">
+        <img src="../Google.png" alt="">
+        <p class="text-black text-sm font-semibold mx-2">Sign up with Goggle</p> 
+      </a>
+      <a href="" class="rounded-full bg-white flex w-60 p-1 justify-center my-2 hover:no-underline">
+        <img src="../Apple-Logo.jpg" alt="" class="w-10">
+        <p class="text-black text-sm font-semibold">Sign up with Apple</p> 
+      </a>
+      <div class="relative">
+        <div class="w-60 mt-4 relative border-slate-200 border-1"></div>
+        <div class="bg-black rounded-full absolute px-2 py-1 -top-4 left-28">or</div>
+      </div>
+      <button class="text-white bg-sky-500 rounded-full p-1 justify-center w-60 mt-3" data-toggle="modal" data-target="#myModal">Create account</button>
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content bg-black border-slate-600 border rounded-lg">
+            <div class="modal-title border-0">
+              <button class="text-slate-100 h-10 w-24 absolute top-0 -left-6" data-dismiss="modal">&times;</button>
+              <div class="flex justify-center">
+                <img src="../X_logo.jpg" alt="" class="w-16 h-16">
+              </div>
+            </div>
+            <div class="modal-body">
+              <div class="text-3xl text-start font-extrabold">Create your account</div>
+              <div class="my-3">
+                <div class="relative">
+                  <label for="Name" class="absolute top-0 pl-3 pb-3 text-15 text-sky-600 label">Name</label>
+                  <input type="text" placeholder="Name" class="block bg-black h-10 bg-black rounded-sm border md:w-140  lg:w-140 w-full outline-0 outline-offset-sky-600 focus:outline-1 focus:outline-sky-700 pl-3 pt-2 text-15 focus:border-sky-700 input" id="Name">
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="relative">
+                  <label for="Email" class="absolute top-0 pl-3 pb-3 text-15 text-sky-600 label">Email</label>
+                  <input type="email" class="block bg-black h-10 bg-black input rounded-sm border border-slate-600 md:w-140 lg:w-140 w-full outline-0 outline-offset-sky-600 focus:outline-1 focus:outline-sky-700 pl-3 pt-2 text-15"  id="Email" placeholder="Email">
+                </div>
+              </div>
+              <div class="text-slate-200">Date of birth</div>
+              <div class="text-15 text-slate-300">This will not be shown publicly. Confirm your own age,even if this account is for a business, a pet, or something else.</div>
+              <div class="flex">
+                <div class="relative pr-3">
+                  <label for="Email" class="absolute pl-2 pb-3 text-15 text-sky-600 top-6">Month</label>
+                  <select name="" id="" class="bg-black my-4 rounded-lg border border-slate-600 w-28 h-10 pt-2 pl-2">
+                    <option value="">January</option>
+                    <option value="">February</option>
+                    <option value="">March</option>
+                    <option value="">April</option>
+                    <option value="">May</option>
+                    <option value="">June</option>
+                    <option value="">July</option>
+                    <option value="">August</option>
+                    <option value="">September</option>
+                    <option value="">October</option>
+                    <option value="">November</option>
+                    <option value="">December</option>
+                  </select>
+                </div>
+                <div class="relative pr-3">
+                <label for="Email" class="absolute pl-2 pb-3 text-15 text-sky-600 top-6">Day</label>
+                  <select name="" id="" class="bg-black my-4 rounded-lg border border-slate-600  w-24 h-10 pt-2 pl-2">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                    <option value="">8</option>
+                    <option value="">9</option>
+                    <option value="">10</option>
+                    <option value="">11</option>
+                    <option value="">12</option>
+                    <option value="">13</option>
+                    <option value="">14</option>
+                    <option value="">15</option>
+                    <option value="">16</option>
+                    <option value="">17</option>
+                    <option value="">18</option>
+                    <option value="">19</option>
+                    <option value="">20</option>
+                    <option value="">21</option>
+                    <option value="">22</option>
+                    <option value="">23</option>
+                    <option value="">24</option>
+                    <option value="">25</option>
+                    <option value="">26</option>
+                    <option value="">27</option>
+                    <option value="">28</option>
+                    <option value="">29</option>
+                    <option value="">30</option>
+                    <option value="">31</option>
+                  </select>
+                </div>
+                <div class="relative">
+                  <label for="Email" class="absolute pl-2 pb-3 text-15 text-sky-600 top-6">Year</label>
+                  <select name="" id="" class="bg-black my-4 rounded-lg border border-slate-600 w-24 h-10 pt-2 pl-2">
+                    <option value="">2024</option>
+                    <option value="">2023</option>
+                    <option value="">2022</option>
+                    <option value="">2021</option>
+                    <option value="">2020</option>
+                    <option value="">2019</option>
+                    <option value="">2018</option>
+                    <option value="">2017</option>
+                    <option value="">2016</option>
+                    <option value="">2015</option>
+                    <option value="">2014</option>
+                    <option value="">2013</option>
+                    <option value="">2012</option>
+                    <option value="">2011</option>
+                    <option value="">2010</option>
+                    <option value="">2009</option>
+                    <option value="">2008</option>
+                    <option value="">2007</option>
+                    <option value="">2006</option>
+                    <option value="">2005</option>
+                    <option value="">2004</option>
+                    <option value="">2003</option>
+                    <option value="">2002</option>
+                    <option value="">2001</option>
+                    <option value="">2000</option>
+                    <option value="">1999</option>
+                    <option value="">1998</option>
+                    <option value="">1997</option>
+                    <option value="">1996</option>
+                    <option value="">1995</option>
+                    <option value="">1994</option>
+                    <option value="">1993</option>
+                    <option value="">1992</option>
+                    <option value="">1991</option>
+                    <option value="">1990</option>
+                    <option value="">1989</option>
+                    <option value="">1988</option>
+                    <option value="">1987</option>
+                    <option value="">1986</option>
+                    <option value="">1985</option>
+                    <option value="">1984</option>
+                    <option value="">1983</option>
+                    <option value="">1982</option>
+                    <option value="">1981</option>
+                    <option value="">1980</option>
+                    <option value="">1979</option>
+                    <option value="">1978</option>
+                    <option value="">1977</option>
+                    <option value="">1976</option>
+                    <option value="">1975</option>
+                    <option value="">1974</option>
+                    <option value="">1973</option>
+                    <option value="">1972</option>
+                    <option value="">1971</option>
+                    <option value="">1970</option>
+                    <option value="">1969</option>
+                    <option value="">1968</option>
+                    <option value="">1967</option>
+                    <option value="">1966</option>
+                    <option value="">1965</option>
+                    <option value="">1964</option>
+                    <option value="">1963</option>
+                    <option value="">1962</option>
+                    <option value="">1961</option>
+                    <option value="">1960</option>
+                    <option value="">1959</option>
+                    <option value="">1958</option>
+                    <option value="">1957</option>
+                    <option value="">1956</option>
+                    <option value="">1955</option>
+                    <option value="">1954</option>
+                    <option value="">1953</option>
+                    <option value="">1952</option>
+                    <option value="">1951</option>
+                    <option value="">1950</option>
+                    <option value="">1949</option>
+                    <option value="">1948</option>
+                    <option value="">1947</option>
+                    <option value="">1946</option>
+                    <option value="">1945</option>
+                    <option value="">1944</option>
+                    <option value="">1943</option>
+                    <option value="">1942</option>
+                    <option value="">1941</option>
+                    <option value="">1940</option>
+                    <option value="">1939</option>
+                    <option value="">1938</option>
+                    <option value="">1937</option>
+                    <option value="">1936</option>
+                    <option value="">1935</option>
+                    <option value="">1934</option>
+                    <option value="">1933</option>
+                    <option value="">1932</option>
+                    <option value="">1931</option>
+                    <option value="">1930</option>
+                    <option value="">1929</option>
+                    <option value="">1928</option>
+                    <option value="">1927</option>
+                    <option value="">1926</option>
+                    <option value="">1925</option>
+                    <option value="">1924</option>
+                    <option value="">1923</option>
+                    <option value="">1922</option>
+                    <option value="">1921</option>
+                    <option value="">1920</option>
+                    <option value="">1919</option>
+                    <option value="">1918</option>
+                    <option value="">1917</option>
+                    <option value="">1916</option>
+                    <option value="">1915</option>
+                    <option value="">1914</option>
+                    <option value="">1913</option>
+                    <option value="">1912</option>
+                    <option value="">1911</option>
+                    <option value="">1910</option>
+                    <option value="">1909</option>
+                    <option value="">1908</option>
+                    <option value="">1907</option>
+                    <option value="">1906</option>
+                    <option value="">1905</option>
+                    <option value="">1904</option>
+                    <option value="">1903</option>
+                    <option value="">1902</option>
+                    <option value="">1901</option>
+                    <option value="">1900</option>
+                  </select>
+                </div>    
+              </div>       
+              <div>
+                <button class="w-full lg:w-140 md:w-140 bg-slate-200 text-black text-center p-1  border-2 border-slate-100 rounded-full" id="next">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-femi w-60 text-slate-400 mt-1">By signing up, you agree to the <span class="text-sky-400">Terms of service</span> and <span class="text-sky-400">Privacy Policy</span>, including <span class="text-sky-400">Cookie Use</span></p>
+      <p class="text-white mt-10 text-md block">Already have an account?</p>
+      <button class="text-sky-700 bg-black rounded-full p-1 justify-center w-60 my-2 border-zinc-800 border-2" data-toggle="modal" data-target="#myModal2">Sign in</button>
+      <div class="modal" id="myModal2">
+        <div class="modal-dialog">
+          <div class="modal-content bg-black border-slate-600 border rounded-lg">
+            <div class="modal-title border-0 flex space-x-32">
+              <button class="text-slate-100 h-10 w-24 -ml-4" data-dismiss="modal">&times;</button>
+              <div class="flex justify-center">
+                <img src="../X_logo.jpg" alt="" class="w-16 h-16">
+              </div>
+            </div>
+            <div class="modal-body m-auto border-0">
+              <div class="font-bold text-3xl">Sign in to X</div>
+              <a href="" class="rounded-full bg-white flex w-60 p-1 justify-center hover:no-underline mt-3">
+                <img src="../Google.png" alt="">
+                <p class="text-black text-sm font-semibold mx-2">Sign up with Goggle</p> 
+              </a>
+              <a href="" class="rounded-full bg-white flex w-60 p-1 justify-center my-2 hover:no-underline">
+                <img src="../Apple-Logo.jpg" alt="" class="w-10">
+                <p class="text-black text-sm font-semibold">Sign up with Apple</p> 
+              </a>
+              <div class="relative">
+                <div class="w-60 mt-4 relative border-slate-200" style="border-width:0.1px; opacity: 0.6;"></div>
+                <div class="bg-black rounded-full absolute px-2 py-1" style="top: -16px; left: 110px;">or</div>
+              </div>
+              <div class="relative mt-4">
+                <label for="Phone" class="absolute pl-2 pb-3 text-15 text-sky-600" style="top: 0;">Phone,email, or username</label>
+                <input type="text" placeholder="Phone,email, or username" id="Phone" class="block bg-black h-10 bg-black rounded-sm border border-slate-600 w-60 outline-0 outline-offset-sky-600 focus:outline-1 focus:outline-sky-700 pl-2 pt-2 text-15">
+              </div>
+            </div>
+            <div class="modal-footer flex flex-col m-auto border-0">
+              <button class="w-60 bg-slate-200 text-black text-center p-1  border-2 border-slate-100 rounded-full mt-2">Next</button>
+              <button class="w-60 bg-black text-white text-center p-1  border-2 border-slate-100 rounded-full mt-2">Forgot password</button>
+              <div class="mt-10 text-sm text-gray-500">Don't have an account?<span><a href="" class="text-sky-500 hover:text-sky-500">Sign up</a></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="flex flex-wrap justify-center text-slate-400 text-15 py-5 space-x-2">
+    <div>
+      <a href="" class="hover:text-slate-300">About</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Download the X app</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Help Center</a>
+    </div>   
+    <div> 
+      <a href="" class="hover:text-slate-300">Terms of Service</a>
+    </div>  
+    <div>
+      <a href="" class="hover:text-slate-300">Privacy Policy</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Cookie Policy</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Accessibility</a>      
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Ads info</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Blog</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Careers</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Brand Resources</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Advertising</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Marketing</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">X for Business</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Developers</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Directory</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">Settings</a>
+    </div>
+    <div>
+      <a href="" class="hover:text-slate-300">© 2024 X Corp.</a>
+    </div>
+  </div>  
+  <script>
+    const inputs = document.querySelectorAll('.input');
+    var labels = document.querySelectorAll('.label');
+    inputs.forEach((input)=>{
+      input.addEventListener('focus', ()=>{
+      labels.forEach((label)=>{
+        label.style.opacity= "1";
+      })
+    });
+    })
+  </script>
+</body>
+</html>
