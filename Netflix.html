@@ -11,6 +11,11 @@
   <link rel="icon" type="image/x-icon" href="Netflix2.png">
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <!-- UIkit CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css" />
 
@@ -37,7 +42,7 @@
       
     }
     .sub-body{
-      padding-left: 50px;
+      margin: auto;
       background-color: black;
     }
     nav{
@@ -103,8 +108,18 @@
       background-color: rgba(43, 37, 37, 0.623);
       border-radius: 4px;
       color:white;
-      width: 90%;
+      width: 30%;
       border: 1px solid rgba(255, 255, 255, 0.342);
+    }
+    @media screen and (max-width:1100px) {
+      .input{
+        width: 60%;
+      }
+    }
+    @media screen and (max-width:650px) {
+      .input{
+        width: 80%;
+      }
     }
     .input::placeholder{
       font-size: 1.3rem;
@@ -130,9 +145,8 @@
     .section-title{
       font-weight: 500;
       font-size: 1.6rem;
-      margin-left: -12px;
-      margin-right: -12px;
-      padding:79px 80px 2px ;
+      margin: auto;
+      padding:19px 20px;
       border-top: 4px solid rgb(255, 0, 0);
       border-top-left-radius: 85% ;
       border-top-right-radius: 85% ;
@@ -156,7 +170,15 @@
       padding-left: 60px;
       background-color: black;
     }
-
+    .inner{
+      position: relative;
+    }
+    .caret{
+      position: absolute;
+      top: 23px;
+      right: 40px;
+      cursor: pointer;
+    }
     @media screen and (max-width:960px) {
       select{
         width: 90%;
@@ -164,75 +186,72 @@
       }
       .select-section{
         display: block;
+        margin: auto;
+        padding-left: 0;
+      }
+      .caret{
+        position: absolute;
+        top: 23px;
+        right: 10%;
+        cursor: pointer;
       }
     }
     .location{
       margin: 10px 30px;
     }
-    .image-section{
+    .container-image{
       display: flex;
-      overflow-x:scroll;
-      scroll-behavior: smooth;
       align-items: center;
-      text-align: center;
+      justify-content: center;
     }
-    .image-section div{
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(6,auto);
-      grid-gap: 8px;
-      padding: 10px;
-      flex: none;
+    .card-wrapper{
+      max-width: 1100px;
+      margin: 0 60px 35px;
+      padding: 20px 10px;
+      overflow: hidden;
     }
-    @media screen and (max-width:1000px) {
-      .image-section div{
-        grid-template-columns: repeat(3,auto);
-      }
-    }
-    .image-section::-webkit-scrollbar{
-      display: none;
-    }
-    .wrap{
-      position: relative;
-      margin-left: -35px;
-    }
-    #backBtn,#nextBtn{
-      width: 50px;
-      cursor: pointer;
-      margin: 40px;
-      font-size: 35px;
-      z-index: 1;
-    }
-    #backBtn{
-      position: absolute;
-      top: 35%;
-    }
-    #nextBtn{
-      position: absolute;
-      top: 35%;
-      right: 0;
-    }
-    .contain{
+    .card-link{
+      width: 350px;
+      display: block;
+      padding: 18px;
+      border-radius: 12px;
+      text-decoration: none;
       position: relative;
     }
-    .image{
-      width: 100%;
-      height: 260px;
-      border-radius: 8px;
-      margin: 10px 9px 10px 25px;
+    .card-link:active{
+      cursor: grabbing;
     }
-    .image:hover{
+    .card-link:hover .card-image{
       width: 220px;
-      height: 270px;
+      height: 290px;
     }
-    .number{
+    .card-image{
+      width: 200px;
+      border-radius: 10px;
+    }
+    .card-list .card-item{
+      list-style: none;
+    }
+    .badge{
       position: absolute;
-      bottom: 15%;
-      left: 1%;
-      font-size: 8rem;
-      color: rgb(0, 0, 0);
       -webkit-text-stroke: 2px white;
-      text-shadow: 2px 3px 3px white;
+      font-size: 6rem;
+      font-weight: 600;
+      top: 40%;
+      color: black;
+      left: -8px;
+    }
+    .card-wrapper .swiper-slide-button{
+      color: #5372F0;
+      margin-top: -35px;
+    }
+    @media screen and (max-width: 768px) {
+      .card-wrapper{
+        margin: 0 10px 25px;
+      }
+      .card-wrapper .swiper-slide-button{
+        display: none;
+      }
     }
     .Section4{
       margin: 10px;
@@ -267,7 +286,7 @@
   .description-content{
     color: rgb(193, 194, 196);
   }
-  .hidden-content{
+  .hidden-content1,.hidden-content2,.hidden-content3,.hidden-content4,.hidden-content5,.hidden-content6{
     border: 1px solid black;
     margin-bottom: 12px;
     padding: 15px 10px;
@@ -275,18 +294,22 @@
     display: none;
     font-size: larger;
   }
-  #mycheckbox:checked~.hidden-content{
-    display: block;
-   }
   .grid2{
     display: grid;
     grid-template-columns: 1fr 20px 40px;
     border: 1px solid black;
-    height: 10vh;
+    height: 75px;
     padding: 15px 10px;
     background-color:rgb(46, 43, 43);
     cursor: pointer;
     font-size: larger;
+  }
+  .plus{
+    font-size:2rem;
+  }
+  .x-mark{
+    font-size: 2.2rem;
+    display: none;
   }
   .grid2:hover{
     background-color: rgb(65, 60, 60);
@@ -339,7 +362,7 @@
     text-decoration-color: gray;
     color: gray;
    }
-   /* .fa-plus:focus .hidden-content{
+   /* .fa-plus plus:focus .hidden-content{
     display: flex;
    } */
    svg{
@@ -382,122 +405,90 @@
     <section style="background-color: rgba(0, 0, 0, 0.753);">
       <div class="section-title">Trending Now</div>
       <div class="select-section">
-        <select name="Location" class="location" >
-          <option value="1">Nigeria</option>
-          <option value="2">Global</option>
-        </select>
-        <i class="fa fa-caret-down" aria-hidden="true" style="margin-top: 26px; margin-left: -60px;"></i>
-        <div>
+        <div class="inner">  
+          <select name="Location" class="location" >
+            <option value="1">Nigeria</option>
+            <option value="2">Global</option>
+          </select>
+          <i class="fa fa-caret-down caret" aria-hidden="true"></i>
+        </div>
+        <div class="inner">
           <select name="Classification" class="location">
             <option value="1">Movies</option>
             <option value="1">TV Shows</option>
           </select>
-          <i class="fa fa-caret-down" aria-hidden="true" style="margin-left: -60px;"></i>
+          <i class="fa fa-caret-down caret" aria-hidden="true"></i>
         </div>
       </div> 
     </section>
     <div class="sub-body">
     <div style="padding-left: 30px;" class="wrap">
-      <i class="fa-solid fa-caret-left" id="backBtn"></i> 
-      <section class="image-section">
-        <div>
-          <div class="contain">
-            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdvFNZbAdb02xUt5ocAovItIKL73oi0vrbI1jygF5a7VcldKCOpnbCSXwzS87ji7svRFfbTPV1CVPaKzeJyPAn6lsdVJgnUGmiQkCxq3Sv7aLp0f8aNIG9aosfhfJnWa07Kx2VZURxfU-Yn8iaIekL__GwBiPPuo-qiNjqdVwZrXKBQVUHzBnGkDGmdCblS9XRFPq7JOW3pjUiuOJPOgNurzfvzZXpftDIL0zuUIrLZ3tgvqc1GSUZkykBEty9EoWcfMKrPIgsFwPLYAyyO0aMmvkSlMOJlaXsP_n-X4-kZhaYDA2iK1PSOPFlkAjCIFguUTuLZDqvjubKLrXVWQUhU.webp?r=82f
-            "class="image">
-            <div class="number">1</div>
-          </div>
-          <div class="contain">
-            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABV9jpsQLX2zCeHf8kcG_bvygGTvpJZhVXESRX0tZluERP850QQ5sWxFjQCszNxHK8mDSa27l6PljmWHQxSVlOq1_mpDiMa2gI-ad_bCxRKyR1dS0QotA47lrPRBKAzGuPBFrw0rQRy1f4vpYYydCRiikVNL0KmJ-f_MvpDLKEFXVAw-iTzwhEaUp8WAR9bjJWzmOFmTUnlRR6nIu5LInpekK6hIlsyvYwr75jlwdoxgH5y_uMkYj12uhjmIq-r9xDUVJhqd_vW2p3BhRlZrDSBeW_UTid8daQjLyNFkgCOSNmdhPzJ7nizQ7Ed01CMEXRhFBnP3Oa5xvSFfuqzp73qD6_fzJot1vug5XmWGuPNUSUtelOQ4.webp?r=c0a" class="image">
-            <div class="number">2</div>
-          </div>
-          <div class="contain">
-            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYYVSegfyDB429U7_0VAdFVaQb8BN-RaoNzqc9fUog_2YgqNCuSFF-vk45NTrel8nDjerE5oB64Zv_aSbBqUVgv8HT0r-XYpz5-q9_ZuH8l9jiZxvHD-mDWTbi91huF4DaBDhT5ZnYD9B0YvKpi3mb26Zrl3DusLdg74BOGIE62C8GLXRpC_BoqKgaQTqWXGNY5hYY7OgZz6yUXDcfmwx8D9AJl9B4igCX1YQ-GtQwS07eLm-te27E1-MAZ3LJTvqPGhvWhEBrzG5SNvXC5tMbppqpLpYqgMAToJPCyxVVlPfsDyP7MVfop5gemw9P5CwCpI1qwLIdrdXksnfJfzpcHg1mmb4DsXqjyXVw7_8Alh1bG_148.webp?r=688" class="image">
-            <div class="number">3</div>
-          </div>
-          <div class="contain">
-            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABbQhgMV8-ji5yrOGF3y0JL3DTMWGHX2QzZJAcwokcVZVe8x73L_WBLr9n0vSB2_zDq9CJMyh1fwPgo5bG0C1oNGFeAlSGPwxj5wwC63sKl1CcFJl-KdrputboBHcAXWikLwZGeTC9DkqeiLw3xaE9BqbwDY3AYijABTggYGz7pKwID70UMPiDlUIGi500aPZlJH_3vAhbQfqMWEVWnEMgQ2A8GRDOR7zMcMXgg1Y7ghPfwUxSD5ZVSeClDd98JAem34em4tu4XKD5fOVRouXD40I1GcbbngGyrqhkjYfMj_WRFqa2jABnWaEAGpPLcWHijqg_16sMvbz4eoqnwT4j5Yn6eCod62odirMSMYRMOnUrcxDG6E.webp?r=127" class="image">
-            <div class="number">4</div>
-          </div>
-          <div class="contain">
-            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRPtXW7JNkZmJED8LzDYjNcG3k2oMdF-HVJOaSHAraay86nRcNkyp9S7PgPFlDIJ1yEcri1trC134K7HeKa9Q99umcH00poyemeco-BgfcCQFRhhoNEQHJSFVBYhNvm2Ye0elwE_X86tn78oXgOhDHRR0rieHT8Jv0c.webp?r=a33" class="image">
-            <div class="number">5</div>
-          </div>
-          <div class="contain">
-            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcgn17Z8xiwYiRx6a3Z-j72R2lWXGYBOI0KJmZrpQg0IYgUkLbKJNsl7KTEzdppXQw2qsUHqQfAuurx3NnCZhSo5RGXW70-HgjtZ81Va4SIR6rcTXumDrgsdZPyDjZTUXZt_wAnsQeXe-r0YErbo8rFSmUU37pTnxzZn6jRlFicPINqMvw6q5g-nkBZFsEXJyqBmXKLmnUXEXkIMH8d45bpaDVXqNQ6rC3iW8gLMZ1ctD1SCOVgeJsEdbILsdDpRtI5DK89HdkcyRMlL0AkjfsCq-ScOwMIJhvQGQltQ51QeYiAbBv7aKti78CHwpEUWxMoQ04ZfBAoO6LgfCSudpoQ.webp?r=1e9" class="image">
-            <div class="number">6</div>
-          </div>
+      <div class="container-image">
+        <div class="card-wrapper">
+         <ul class="card-list swiper-wrapper">
+          <li class="card-item swiper-slide">
+           <a href="#" class="card-link">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdvFNZbAdb02xUt5ocAovItIKL73oi0vrbI1jygF5a7VcldKCOpnbCSXwzS87ji7svRFfbTPV1CVPaKzeJyPAn6lsdVJgnUGmiQkCxq3Sv7aLp0f8aNIG9aosfhfJnWa07Kx2VZURxfU-Yn8iaIekL__GwBiPPuo-qiNjqdVwZrXKBQVUHzBnGkDGmdCblS9XRFPq7JOW3pjUiuOJPOgNurzfvzZXpftDIL0zuUIrLZ3tgvqc1GSUZkykBEty9EoWcfMKrPIgsFwPLYAyyO0aMmvkSlMOJlaXsP_n-X4-kZhaYDA2iK1PSOPFlkAjCIFguUTuLZDqvjubKLrXVWQUhU.webp?r=82f" class="card-image">
+            <p class="badge">1</p>
+           </a>
+          </li>
+          <li class="card-item swiper-slide">
+           <a href="#" class="card-link">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABV9jpsQLX2zCeHf8kcG_bvygGTvpJZhVXESRX0tZluERP850QQ5sWxFjQCszNxHK8mDSa27l6PljmWHQxSVlOq1_mpDiMa2gI-ad_bCxRKyR1dS0QotA47lrPRBKAzGuPBFrw0rQRy1f4vpYYydCRiikVNL0KmJ-f_MvpDLKEFXVAw-iTzwhEaUp8WAR9bjJWzmOFmTUnlRR6nIu5LInpekK6hIlsyvYwr75jlwdoxgH5y_uMkYj12uhjmIq-r9xDUVJhqd_vW2p3BhRlZrDSBeW_UTid8daQjLyNFkgCOSNmdhPzJ7nizQ7Ed01CMEXRhFBnP3Oa5xvSFfuqzp73qD6_fzJot1vug5XmWGuPNUSUtelOQ4.webp?r=c0a" class="card-image">
+            <p class="badge">2</p>
+           </a>
+          </li>
+          <li class="card-item swiper-slide">
+           <a href="#" class="card-link">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYYVSegfyDB429U7_0VAdFVaQb8BN-RaoNzqc9fUog_2YgqNCuSFF-vk45NTrel8nDjerE5oB64Zv_aSbBqUVgv8HT0r-XYpz5-q9_ZuH8l9jiZxvHD-mDWTbi91huF4DaBDhT5ZnYD9B0YvKpi3mb26Zrl3DusLdg74BOGIE62C8GLXRpC_BoqKgaQTqWXGNY5hYY7OgZz6yUXDcfmwx8D9AJl9B4igCX1YQ-GtQwS07eLm-te27E1-MAZ3LJTvqPGhvWhEBrzG5SNvXC5tMbppqpLpYqgMAToJPCyxVVlPfsDyP7MVfop5gemw9P5CwCpI1qwLIdrdXksnfJfzpcHg1mmb4DsXqjyXVw7_8Alh1bG_148.webp?r=688" class="card-image">
+            <p class="badge">3</p>
+           </a>
+          </li>
+          <li class="card-item swiper-slide">
+           <a href="#" class="card-link">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABbQhgMV8-ji5yrOGF3y0JL3DTMWGHX2QzZJAcwokcVZVe8x73L_WBLr9n0vSB2_zDq9CJMyh1fwPgo5bG0C1oNGFeAlSGPwxj5wwC63sKl1CcFJl-KdrputboBHcAXWikLwZGeTC9DkqeiLw3xaE9BqbwDY3AYijABTggYGz7pKwID70UMPiDlUIGi500aPZlJH_3vAhbQfqMWEVWnEMgQ2A8GRDOR7zMcMXgg1Y7ghPfwUxSD5ZVSeClDd98JAem34em4tu4XKD5fOVRouXD40I1GcbbngGyrqhkjYfMj_WRFqa2jABnWaEAGpPLcWHijqg_16sMvbz4eoqnwT4j5Yn6eCod62odirMSMYRMOnUrcxDG6E.webp?r=127" class="card-image">
+            <p class="badge">4</p>
+           </a>
+          </li>
+          <li class="card-item swiper-slide">
+           <a href="#" class="card-link">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRPtXW7JNkZmJED8LzDYjNcG3k2oMdF-HVJOaSHAraay86nRcNkyp9S7PgPFlDIJ1yEcri1trC134K7HeKa9Q99umcH00poyemeco-BgfcCQFRhhoNEQHJSFVBYhNvm2Ye0elwE_X86tn78oXgOhDHRR0rieHT8Jv0c.webp?r=a33" class="card-image">
+            <p class="badge">5</p>
+           </a>
+          </li>
+          <li class="card-item swiper-slide">
+           <a href="#" class="card-link">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcgn17Z8xiwYiRx6a3Z-j72R2lWXGYBOI0KJmZrpQg0IYgUkLbKJNsl7KTEzdppXQw2qsUHqQfAuurx3NnCZhSo5RGXW70-HgjtZ81Va4SIR6rcTXumDrgsdZPyDjZTUXZt_wAnsQeXe-r0YErbo8rFSmUU37pTnxzZn6jRlFicPINqMvw6q5g-nkBZFsEXJyqBmXKLmnUXEXkIMH8d45bpaDVXqNQ6rC3iW8gLMZ1ctD1SCOVgeJsEdbILsdDpRtI5DK89HdkcyRMlL0AkjfsCq-ScOwMIJhvQGQltQ51QeYiAbBv7aKti78CHwpEUWxMoQ04ZfBAoO6LgfCSudpoQ.webp?r=1e9" class="card-image">
+            <p class="badge">6</p>
+           </a>
+          </li>
+          <li class="card-item swiper-slide">
+           <a href="#" class="card-link">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVndbwBLxBYhHr9zrTNMC_ryu5TLX0gKOuMwwN_HNUi_Seu9kz9RQ3BEI5lngatgkjoqtTRuevOHmy3RpGr23pFSciyhJsfVq5N9Xfx4hvILAhR7XXdq3Ji-ngCYitlsEm9r1OG_piLycRm2HtxIxum_2YfoJR8HEjqdPfskL37byADIbX3GgP0S3tVt34nSV-F7JG_euTZqeNiFefJSQ34RuC5-mGMBJXNW01s4-NnKaqYX7XFe34ygpYa1hgsnINXwY4idSzrOO8IiyBS1FDLt4NbWL_GQB5M0dAP-r_kyobIASy1K4Vog-wORJDsqLwF5gVpia0fefinPY3zkp6c.webp?r=f62" class="card-image">
+            <p class="badge">7</p>
+           </a>
+          </li>
+          <li class="card-item swiper-slide">
+           <a href="#" class="card-link">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRoKw7Cj0qLX_QYGhAr03wTwjB72R5Ivos4DZpEzUBg43tD3Ig1G1A1TC1Vye8yJ2qI4gHuaBGSDhJvUpps-wqnU7rpuBJZGlnlxYCCTSuGn3PBU0crumQfsQXvqSn7Emiwgl2o_23qFvoSeH5kcxlRiWTUSaEDCAbQQHLxpnB0p5_0OFH7wXb4MyWKEOTcIjjNkx38VsJaB0EHzBjoMg3ggIW2Pw6ahTMnjyEuIGDLmkWBOva79U6XLljVh6Ic0KKFLMcyiAh_DAq-KjHyLvea_qxUwTGzoDi32YGCGvuOKK70LdUAWbRK-_dznehtiCxnj0wyZA53kLIPmIRx0B73BDNuBgznR2PB4igCI3N97qZO5hKM.webp?r=63a" class="card-image">
+            <p class="badge">8</p>
+           </a>
+          </li>
+          <li class="card-item swiper-slide">
+           <a href="#" class="card-link">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdOvDgCQJFpzty-Hp4mmGa0DJpsANN9mLanrSlmTRDb0XnLyS6fXkZ9kXKdRbaruBYADycBowlcFY1s4c2z7cfU8HBAw6LfTpBkcCq8qQgbqlovVGM39M4kYtd7zp5SKEAJCGLVdlyRbeU5SG04wssc4H-8kj5RLrSkjPT-WZ1fUGlSOdYoa9oqJuMBiGH1xQSmBfXlxoLrm72MwTMWC_ytYlCsh8YjpdRGEN0DxPQOvZ4QLPjXHnLxtTUTwTKYDqywUBi2gJXuMJLIFTCmLVohA0fTDDf-T4frCbw1F5WHCOWW6mgy4-cYl.webp?r=7e5" class="card-image">
+            <p class="badge">9</p>
+           </a>
+          </li>
+          <li class="card-item swiper-slide">
+           <a href="#" class="card-link">
+            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABf0SGUcfLghKhIfjvbuPrKEA3PlY5e8a0jLCPt5YPkcTYinxOz7wH3w1jVrXOgr3AHqU6gUs_9PrCdDQWuv-Z7BN1E_msVdZTAStWD3dMeaKawErRo5rTb8_NLocgTYHdFgxgViITfNMdP77lOiLrpTvPcVA2Q2qBdZ9iLrDRZlYtaJLeQTs4wUJlFtk0tRHqvC9caBNI1CXWFzrXH_6wdjUChWG-apaY-uSI13Tc4d9vfSwC8nt9hxzaaG_8ou6J04ghe-1ni3umpWCVN5vG-touQ06ccI6eGRnBsfrNuZjydzmwSos6i_S.webp?r=fec" class="card-image">
+            <p class="badge">10</p>
+           </a>
+          </li>
+         </ul>
         </div>
-        <div>  
-          <div class="contain">
-            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVndbwBLxBYhHr9zrTNMC_ryu5TLX0gKOuMwwN_HNUi_Seu9kz9RQ3BEI5lngatgkjoqtTRuevOHmy3RpGr23pFSciyhJsfVq5N9Xfx4hvILAhR7XXdq3Ji-ngCYitlsEm9r1OG_piLycRm2HtxIxum_2YfoJR8HEjqdPfskL37byADIbX3GgP0S3tVt34nSV-F7JG_euTZqeNiFefJSQ34RuC5-mGMBJXNW01s4-NnKaqYX7XFe34ygpYa1hgsnINXwY4idSzrOO8IiyBS1FDLt4NbWL_GQB5M0dAP-r_kyobIASy1K4Vog-wORJDsqLwF5gVpia0fefinPY3zkp6c.webp?r=f62" class="image">
-            <div class="number">7</div>
-          </div>
-          <div class="contain">
-            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRoKw7Cj0qLX_QYGhAr03wTwjB72R5Ivos4DZpEzUBg43tD3Ig1G1A1TC1Vye8yJ2qI4gHuaBGSDhJvUpps-wqnU7rpuBJZGlnlxYCCTSuGn3PBU0crumQfsQXvqSn7Emiwgl2o_23qFvoSeH5kcxlRiWTUSaEDCAbQQHLxpnB0p5_0OFH7wXb4MyWKEOTcIjjNkx38VsJaB0EHzBjoMg3ggIW2Pw6ahTMnjyEuIGDLmkWBOva79U6XLljVh6Ic0KKFLMcyiAh_DAq-KjHyLvea_qxUwTGzoDi32YGCGvuOKK70LdUAWbRK-_dznehtiCxnj0wyZA53kLIPmIRx0B73BDNuBgznR2PB4igCI3N97qZO5hKM.webp?r=63a" class="image">
-            <div class="number">8</div>
-          </div>
-          <div class="contain">
-            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdOvDgCQJFpzty-Hp4mmGa0DJpsANN9mLanrSlmTRDb0XnLyS6fXkZ9kXKdRbaruBYADycBowlcFY1s4c2z7cfU8HBAw6LfTpBkcCq8qQgbqlovVGM39M4kYtd7zp5SKEAJCGLVdlyRbeU5SG04wssc4H-8kj5RLrSkjPT-WZ1fUGlSOdYoa9oqJuMBiGH1xQSmBfXlxoLrm72MwTMWC_ytYlCsh8YjpdRGEN0DxPQOvZ4QLPjXHnLxtTUTwTKYDqywUBi2gJXuMJLIFTCmLVohA0fTDDf-T4frCbw1F5WHCOWW6mgy4-cYl.webp?r=7e5" class="image">
-            <div class="number">9</div>
-          </div>
-          <div class="contain">
-            <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABf0SGUcfLghKhIfjvbuPrKEA3PlY5e8a0jLCPt5YPkcTYinxOz7wH3w1jVrXOgr3AHqU6gUs_9PrCdDQWuv-Z7BN1E_msVdZTAStWD3dMeaKawErRo5rTb8_NLocgTYHdFgxgViITfNMdP77lOiLrpTvPcVA2Q2qBdZ9iLrDRZlYtaJLeQTs4wUJlFtk0tRHqvC9caBNI1CXWFzrXH_6wdjUChWG-apaY-uSI13Tc4d9vfSwC8nt9hxzaaG_8ou6J04ghe-1ni3umpWCVN5vG-touQ06ccI6eGRnBsfrNuZjydzmwSos6i_S.webp?r=fec" class="image">
-            <div class="number">10</div>
-          </div>
-        </div>
-      </section>
-      <i class="fa-solid fa-caret-right" id="nextBtn"></i>  
-<!--       <div class="uk-child-width-1-2@m" uk-grid>
-        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
-          <div class="uk-slideshow-items">
-            <section class="image-section">
-            <div class="contain">
-              <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdvFNZbAdb02xUt5ocAovItIKL73oi0vrbI1jygF5a7VcldKCOpnbCSXwzS87ji7svRFfbTPV1CVPaKzeJyPAn6lsdVJgnUGmiQkCxq3Sv7aLp0f8aNIG9aosfhfJnWa07Kx2VZURxfU-Yn8iaIekL__GwBiPPuo-qiNjqdVwZrXKBQVUHzBnGkDGmdCblS9XRFPq7JOW3pjUiuOJPOgNurzfvzZXpftDIL0zuUIrLZ3tgvqc1GSUZkykBEty9EoWcfMKrPIgsFwPLYAyyO0aMmvkSlMOJlaXsP_n-X4-kZhaYDA2iK1PSOPFlkAjCIFguUTuLZDqvjubKLrXVWQUhU.webp?r=82f
-              "class="image">
-              <div class="number">1</div>
-            </div>
-            <div class="contain">
-              <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABV9jpsQLX2zCeHf8kcG_bvygGTvpJZhVXESRX0tZluERP850QQ5sWxFjQCszNxHK8mDSa27l6PljmWHQxSVlOq1_mpDiMa2gI-ad_bCxRKyR1dS0QotA47lrPRBKAzGuPBFrw0rQRy1f4vpYYydCRiikVNL0KmJ-f_MvpDLKEFXVAw-iTzwhEaUp8WAR9bjJWzmOFmTUnlRR6nIu5LInpekK6hIlsyvYwr75jlwdoxgH5y_uMkYj12uhjmIq-r9xDUVJhqd_vW2p3BhRlZrDSBeW_UTid8daQjLyNFkgCOSNmdhPzJ7nizQ7Ed01CMEXRhFBnP3Oa5xvSFfuqzp73qD6_fzJot1vug5XmWGuPNUSUtelOQ4.webp?r=c0a" class="image">
-              <div class="number">2</div>
-            </div>
-            <div class="contain">
-              <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABYYVSegfyDB429U7_0VAdFVaQb8BN-RaoNzqc9fUog_2YgqNCuSFF-vk45NTrel8nDjerE5oB64Zv_aSbBqUVgv8HT0r-XYpz5-q9_ZuH8l9jiZxvHD-mDWTbi91huF4DaBDhT5ZnYD9B0YvKpi3mb26Zrl3DusLdg74BOGIE62C8GLXRpC_BoqKgaQTqWXGNY5hYY7OgZz6yUXDcfmwx8D9AJl9B4igCX1YQ-GtQwS07eLm-te27E1-MAZ3LJTvqPGhvWhEBrzG5SNvXC5tMbppqpLpYqgMAToJPCyxVVlPfsDyP7MVfop5gemw9P5CwCpI1qwLIdrdXksnfJfzpcHg1mmb4DsXqjyXVw7_8Alh1bG_148.webp?r=688" class="image">
-              <div class="number">3</div>
-            </div>
-            <div class="contain">
-              <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABbQhgMV8-ji5yrOGF3y0JL3DTMWGHX2QzZJAcwokcVZVe8x73L_WBLr9n0vSB2_zDq9CJMyh1fwPgo5bG0C1oNGFeAlSGPwxj5wwC63sKl1CcFJl-KdrputboBHcAXWikLwZGeTC9DkqeiLw3xaE9BqbwDY3AYijABTggYGz7pKwID70UMPiDlUIGi500aPZlJH_3vAhbQfqMWEVWnEMgQ2A8GRDOR7zMcMXgg1Y7ghPfwUxSD5ZVSeClDd98JAem34em4tu4XKD5fOVRouXD40I1GcbbngGyrqhkjYfMj_WRFqa2jABnWaEAGpPLcWHijqg_16sMvbz4eoqnwT4j5Yn6eCod62odirMSMYRMOnUrcxDG6E.webp?r=127" class="image">
-              <div class="number">4</div>
-            </div>
-            <div class="contain">
-              <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRPtXW7JNkZmJED8LzDYjNcG3k2oMdF-HVJOaSHAraay86nRcNkyp9S7PgPFlDIJ1yEcri1trC134K7HeKa9Q99umcH00poyemeco-BgfcCQFRhhoNEQHJSFVBYhNvm2Ye0elwE_X86tn78oXgOhDHRR0rieHT8Jv0c.webp?r=a33" class="image">
-              <div class="number">5</div>
-            </div>
-            <div class="contain">
-              <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABcgn17Z8xiwYiRx6a3Z-j72R2lWXGYBOI0KJmZrpQg0IYgUkLbKJNsl7KTEzdppXQw2qsUHqQfAuurx3NnCZhSo5RGXW70-HgjtZ81Va4SIR6rcTXumDrgsdZPyDjZTUXZt_wAnsQeXe-r0YErbo8rFSmUU37pTnxzZn6jRlFicPINqMvw6q5g-nkBZFsEXJyqBmXKLmnUXEXkIMH8d45bpaDVXqNQ6rC3iW8gLMZ1ctD1SCOVgeJsEdbILsdDpRtI5DK89HdkcyRMlL0AkjfsCq-ScOwMIJhvQGQltQ51QeYiAbBv7aKti78CHwpEUWxMoQ04ZfBAoO6LgfCSudpoQ.webp?r=1e9" class="image">
-              <div class="number">6</div>
-            </div>
-            <div class="contain">
-              <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVndbwBLxBYhHr9zrTNMC_ryu5TLX0gKOuMwwN_HNUi_Seu9kz9RQ3BEI5lngatgkjoqtTRuevOHmy3RpGr23pFSciyhJsfVq5N9Xfx4hvILAhR7XXdq3Ji-ngCYitlsEm9r1OG_piLycRm2HtxIxum_2YfoJR8HEjqdPfskL37byADIbX3GgP0S3tVt34nSV-F7JG_euTZqeNiFefJSQ34RuC5-mGMBJXNW01s4-NnKaqYX7XFe34ygpYa1hgsnINXwY4idSzrOO8IiyBS1FDLt4NbWL_GQB5M0dAP-r_kyobIASy1K4Vog-wORJDsqLwF5gVpia0fefinPY3zkp6c.webp?r=f62" class="image">
-              <div class="number">7</div>
-            </div>
-            <div class="contain">
-              <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRoKw7Cj0qLX_QYGhAr03wTwjB72R5Ivos4DZpEzUBg43tD3Ig1G1A1TC1Vye8yJ2qI4gHuaBGSDhJvUpps-wqnU7rpuBJZGlnlxYCCTSuGn3PBU0crumQfsQXvqSn7Emiwgl2o_23qFvoSeH5kcxlRiWTUSaEDCAbQQHLxpnB0p5_0OFH7wXb4MyWKEOTcIjjNkx38VsJaB0EHzBjoMg3ggIW2Pw6ahTMnjyEuIGDLmkWBOva79U6XLljVh6Ic0KKFLMcyiAh_DAq-KjHyLvea_qxUwTGzoDi32YGCGvuOKK70LdUAWbRK-_dznehtiCxnj0wyZA53kLIPmIRx0B73BDNuBgznR2PB4igCI3N97qZO5hKM.webp?r=63a" class="image">
-              <div class="number">8</div>
-            </div>
-            <div class="contain">
-              <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdOvDgCQJFpzty-Hp4mmGa0DJpsANN9mLanrSlmTRDb0XnLyS6fXkZ9kXKdRbaruBYADycBowlcFY1s4c2z7cfU8HBAw6LfTpBkcCq8qQgbqlovVGM39M4kYtd7zp5SKEAJCGLVdlyRbeU5SG04wssc4H-8kj5RLrSkjPT-WZ1fUGlSOdYoa9oqJuMBiGH1xQSmBfXlxoLrm72MwTMWC_ytYlCsh8YjpdRGEN0DxPQOvZ4QLPjXHnLxtTUTwTKYDqywUBi2gJXuMJLIFTCmLVohA0fTDDf-T4frCbw1F5WHCOWW6mgy4-cYl.webp?r=7e5" class="image">
-              <div class="number">9</div>
-            </div>
-            <div class="contain">
-              <img src="https://occ-0-5544-769.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABf0SGUcfLghKhIfjvbuPrKEA3PlY5e8a0jLCPt5YPkcTYinxOz7wH3w1jVrXOgr3AHqU6gUs_9PrCdDQWuv-Z7BN1E_msVdZTAStWD3dMeaKawErRo5rTb8_NLocgTYHdFgxgViITfNMdP77lOiLrpTvPcVA2Q2qBdZ9iLrDRZlYtaJLeQTs4wUJlFtk0tRHqvC9caBNI1CXWFzrXH_6wdjUChWG-apaY-uSI13Tc4d9vfSwC8nt9hxzaaG_8ou6J04ghe-1ni3umpWCVN5vG-touQ06ccI6eGRnBsfrNuZjydzmwSos6i_S.webp?r=fec" class="image">
-              <div class="number">10</div>
-            </div>
-            </section>
-          </div>
-          <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
-          <a class="uk-position-center-right uk-position-small uk-hidden-hover"  href uk-slidenav-previous uk-slideshow-item="next"></a>
-        </div>
-      </div> -->
+      </div>
     </div>
     <section class="Section4">
       <div style="font-size: 1.5rem; margin: 15px 15px 0;">More Reasons to Join </div>
@@ -563,11 +554,9 @@
       <div class="contents">
         <div class="grid2">
           <div>What is Netflix?</div>
-         <!--  <input type="checkbox" id="mycheckbox"> -->
-          <label for="mycheckbox"><i class="fa-solid fa-plus" style="font-size:2rem;"></i></label>
-          <i class="fa-solid fa-xmark" style="font-size:2.2rem;display: none;"></i>
+          <i class="fa-solid fa-plus plus" id="plus1"></i>
         </div>
-        <div class="hidden-content">
+        <div class="hidden-content1">
           <div>
             Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.
           </div>
@@ -581,10 +570,9 @@
       <div class="contents">
         <div class="grid2">
           <div>How much does Netflix cost?</div>
-          <i class="fa-solid fa-plus" style="font-size:2rem;"></i>
-          <i class="fa-solid fa-xmark" style="font-size:2.2rem;display: none;"></i>
+          <i class="fa-solid fa-plus plus" id="plus2"></i>
         </div>
-        <div class="hidden-content">
+        <div class="hidden-content2">
           <div>
             Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. plans range nfrom #2,200 to #7,000 a month. No extra costs, no contracts.
           </div>
@@ -593,12 +581,11 @@
       <div class="contents">
         <div class="grid2">
           <div>Where can I watch? </div>
-          <i class="fa-solid fa-plus" style="font-size:2rem;"></i>
-          <i class="fa-solid fa-xmark" style="font-size:2.2rem;display: none;"></i>
+          <i class="fa-solid fa-plus plus" id="plus3"></i>
         </div>
-        <div class="hidden-content">
+        <div class="hidden-content3">
           <div>
-            Watch anywhere, anytin=me. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or any other internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+            Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or any other internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
             <br>
             <br>
             You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.
@@ -608,10 +595,9 @@
       <div class="contents">
         <div class="grid2">
           <div>How do i cancel?</div>
-          <i class="fa-solid fa-plus" style="font-size:2rem;"></i>
-          <i class="fa-solid fa-xmark" style="font-size:2.2rem;display: none;"></i>
+          <i class="fa-solid fa-plus plus" id="plus4"></i>
         </div>
-        <div class="hidden-content">
+        <div class="hidden-content4">
           <div>
             Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees - start or stop your account anytime
           </div>
@@ -620,10 +606,9 @@
       <div class="contents">
         <div class="grid2">
           <div>What can i watch on Netflix</div>
-          <i class="fa-solid fa-plus" style="font-size:2rem;"></i>
-          <i class="fa-solid fa-xmark" style="font-size:2.2rem;display: none;"></i>
+          <i class="fa-solid fa-plus plus" id="plus5"></i>
         </div>
-        <div class="hidden-content">
+        <div class="hidden-content5">
           <div>
             Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.
           </div>
@@ -632,10 +617,9 @@
       <div class="contents">
         <div class="grid2">
           <div>Is Netflix good for kids?</div>
-          <i class="fa-solid fa-plus" style="font-size:2rem;"></i>
-          <i class="fa-solid fa-xmark" style="font-size:2.2rem;display: none;"></i>
+          <i class="fa-solid fa-plus plus" id="plus6"></i>
         </div>
-        <div class="hidden-content">
+        <div class="hidden-content6">
           <div>
             The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.
             <br>
@@ -679,23 +663,88 @@
   </div>
   </section>
 </section>  
-<script>
-  let scrollContainer = document.querySelector(".image-section");
-  let backBtn = document.getElementById("backBtn");
-  let nextBtn = document.getElementById("nextBtn");
-
-  scrollContainer.addEventListener("wheel", (evt)=>{
-    evt.preventDefault();
-    scrollContainer.scrollLeft += evt.deltaY;
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script>
+  const click1 = document.getElementById("plus1");
+  const click2 = document.getElementById("plus2");
+  const click3 = document.getElementById("plus3");
+  const click4 = document.getElementById("plus4");
+  const click5 = document.getElementById("plus5");
+  const click6 = document.getElementById("plus6");
+  const hiddenContent1 = document.querySelector(".hidden-content1");
+  const hiddenContent2 = document.querySelector(".hidden-content2");
+  const hiddenContent3 = document.querySelector(".hidden-content3");
+  const hiddenContent4 = document.querySelector(".hidden-content4");
+  const hiddenContent5 = document.querySelector(".hidden-content5");
+  const hiddenContent6 = document.querySelector(".hidden-content6");
+  click1.addEventListener("click",()=>{
+    if(hiddenContent1.style.display === "none"){
+      hiddenContent1.style.display = "block"
+    }else{
+      hiddenContent1.style.display = "none"
+    }
+  })
+  click2.addEventListener("click",()=>{
+    if(hiddenContent2.style.display === "none"){
+      hiddenContent2.style.display = "block"
+    }else{
+      hiddenContent2.style.display = "none"
+    }
+  })
+  click3.addEventListener("click",()=>{
+    if(hiddenContent3.style.display === "none"){
+      hiddenContent3.style.display = "block"
+    }else{
+      hiddenContent3.style.display = "none"
+    }
+  })
+  click4.addEventListener("click",()=>{
+    if(hiddenContent4.style.display === "none"){
+      hiddenContent4.style.display = "block"
+    }else{
+      hiddenContent4.style.display = "none"
+    }
+  })
+  click5.addEventListener("click",()=>{
+    if(hiddenContent5.style.display === "none"){
+      hiddenContent5.style.display = "block"
+    }else{
+      hiddenContent5.style.display = "none"
+    }
+  })
+  click6.addEventListener("click",()=>{
+    if(hiddenContent6.style.display === "none"){
+      hiddenContent6.style.display = "block"
+    }else{
+      hiddenContent6.style.display = "none"
+    }
+  })
+  const swiper = new Swiper('.card-wrapper', {
+   loop: true,
+   spaceBetween:60,
+   // Navigation arrows
+   navigation: {
+     nextEl: '.swiper-button-next',
+     prevEl: '.swiper-button-prev',
+   },
+   breakpoints:{
+    0:{
+     slidesPerView:1
+    },
+    410:{
+     slidesPerView:2
+    },
+    630:{
+     slidesPerView:3
+    },
+    950:{
+     slidesPerView:4
+    },
+    1200:{
+     slidesPerView:5
+    }
+   }
   });
-  nextBtn.addEventListener("click", ()=>{
-    scrollContainer.style.scrollBehaviour = "smooth";
-    scrollContainer.scrollLeft += 900;
-  })
-  backBtn.addEventListener("click", ()=>{
-    scrollContainer.style.scrollBehaviour = "smooth";
-    scrollContainer.scrollLeft -= 900;
-  })
-</script>
+ </script>
 </body>
 </html>
