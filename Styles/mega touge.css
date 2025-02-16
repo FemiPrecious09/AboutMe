@@ -2007,9 +2007,9 @@ text-decoration: none; font-weight: 642;
     margin: auto;
   }
   .content{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 340.43;
-    width:100%;
+    width:110%;
     margin: auto;
   }
   .description{
@@ -2034,7 +2034,7 @@ text-decoration: none; font-weight: 642;
   .license{
     height: 25.69px;
     font-weight: 366.43;
-    font-size: 20.01px;
+    font-size: 16px;
     line-height: 25.8px;
     margin-top: 15px;
     margin-left: 12%;
@@ -2357,7 +2357,7 @@ text-decoration: none; font-weight: 642;
     width: 301.8px;
   }
   .section6{
-    height: 660.5px;
+    height: 100%;
     padding-left: 15px;
     background: rgb(35,35,35);
     font-family: "Inter", sans-serif;
