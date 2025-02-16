@@ -1981,9 +1981,16 @@ text-decoration: none; font-weight: 642;
     background-color: #1F1E28;
     display: grid;
     grid-template-columns: 130px 1fr;
-    height: 90.3px;
+    height: 100%;
     color: white;
-    padding: 0 20px;
+    padding:20px;
+  }
+  .header-link{
+    font-size: 10px;
+  }
+  .right-header{
+    align-items: center;
+    justify-content: center;
   }
   .section1{
     font-family: "Roboto", sans-serif;
@@ -2105,13 +2112,13 @@ text-decoration: none; font-weight: 642;
     margin-top: 18px;
   }
   .section3{
-    height: 501.69px;
+    height: 100%;
     background: linear-gradient(0deg, #232323, #232323),
     radial-gradient(30.61% 191.95% at 3.76% 67.69%, rgba(145, 87, 139, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
   }
   .section3-contain{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     padding: 20px 20px;
     row-gap: 50px;
   }
