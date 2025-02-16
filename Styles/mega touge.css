@@ -2217,9 +2217,10 @@ text-decoration: none; font-weight: 642;
   }
   .section4-title{
     font-weight: 602;
-    font-size: 14px;
+    font-size: 10px;
+    margin: auto;
     color: black;
-    margin-left: -15px;
+    margin-left: auto;
   }
   .grid5{
     display: flex;
