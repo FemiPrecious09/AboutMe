@@ -13,6 +13,14 @@
     .form-control:focus{
       outline: 2px ridge black;
     }
+    .small{
+      font-size: 15px;
+    }
+    @media screen and (max-width:501px) {
+      .small{
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body class="bg-light pt-lg-5 pt-md-5">
@@ -43,7 +51,7 @@
           <button class="btn btn-success btn-lg" style="background-color: rgb(8, 172, 8) ; font-weight: 500;">Create new account</button>
         </div>
       </form>
-      <h6 class="text-center my-4">Create a Page<small> for a celebrity, brand or business</small></h6>
+      <div class="text-center my-4 small">Create a Page<small> for a celebrity, brand or business</small></div>
     </div>
   </div>
 </body>

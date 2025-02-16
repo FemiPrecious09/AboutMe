@@ -46,13 +46,13 @@ body{
   padding: 80px;
 }
 .phone{
-  width: 558.31px;
-  height: 496.95px;
+  width: 558px;
+  height: 496px;
 }
 .title{
-  font-weight: 642.14;
+  font-weight: 642;
   font-size: 36.69px;
-  width: 555px;
+  width: 100%;
 }
 .content{
   font-size: 22.01px;
@@ -60,7 +60,7 @@ body{
   margin-top: 10px;
 }
 .description{
-  font-weight: 642.14;
+  font-weight: 642;
   line-height: 42.82px;
   font-size: 36.69px;
   margin-top: 27px;
@@ -69,7 +69,7 @@ body{
   background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
   radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
   box-shadow: 0px 7px 7px 0px rgba(126, 126, 126, 0.25);
-  font-weight: 642.14;
+  font-weight: 642;
   font-size: 22.01px;
   line-height: 25.8px;
   margin-top: 30px;
@@ -93,18 +93,18 @@ body{
   padding: 10px 8%;
 }
 .section2-combine{
-  width: 796.25px;
+  width: 100%;
   height: 162.37px;
-  margin-left: 80px;
+  margin: auto;
   margin-top: 40px;
   padding: 12px 4%;
 }
 .section2-title{
-  margin-left: 190px;
+  margin: auto;
   margin-bottom: 15px;
   display: flex;
   justify-content: center;
-  font-weight: 642.14;
+  font-weight: 642;
   font-size: 36.69px;
 }
 .section2-content{
@@ -112,7 +112,7 @@ body{
   font-size: 18.35px;
   line-height: 21.5px;
   padding-left: 75px;
-  width: 870px;
+  width: 100%;
 }
 .grid{
   display: grid;
@@ -160,7 +160,7 @@ body{
   padding: 50px;
 }
 .section3-title{
-  font-weight: 642.14;
+  font-weight: 642;
   font-size: 36.69px;
   line-height: 43px;
   height: 43.11px;
@@ -248,7 +248,7 @@ body{
   padding: 10px 120px;
 }
 .section4-title{
-  font-weight: 642.14;
+  font-weight: 642;
   font-size: 32.69px;
   line-height: 43px;
   color: black;
@@ -267,7 +267,7 @@ body{
 .activate-button{
   background: linear-gradient(0deg, #5C9DFF, #5C9DFF),
   radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-  font-weight: 642.14;
+  font-weight: 642;
   font-size: 29.35px;
   line-height: 34.4px;
   width: 316.45px;
@@ -292,7 +292,7 @@ body{
 .select-server-button{
   background: linear-gradient(0deg, #FFAD4D, #FFAD4D),
   radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-  font-weight: 642.14;
+  font-weight: 642;
   font-size: 29.35px;
   line-height: 34.4px;
   height: 91.73px;
@@ -305,7 +305,7 @@ body{
 .download-button{
   background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
   radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-  font-weight: 642.14;
+  font-weight: 642;
   font-size: 29.35px;
   line-height: 34.4px;
   width: 316.45px;
@@ -320,7 +320,7 @@ body{
   height: 782.45px;
 }
 .section5-title{
-  font-weight: 642.14;
+  font-weight: 642;
   font-size: 36.69px;
   line-height: 43px;
   text-align: center;
@@ -340,7 +340,7 @@ body{
   width: 316.48px;
   height: 91.73px;
   font-size: 29.35px;
-  font-weight: 642.14;
+  font-weight: 642;
   line-height: 34.4px;
   border-radius: 27.52px;
   border: none;
@@ -361,7 +361,7 @@ body{
 .section5-content-title{
   width: 503.61px;
   height: 69.72px;
-  font-weight: 642.14;
+  font-weight: 642;
   font-size: 29.35px;
   line-height: 34.4px;
   margin-bottom: 40px;
@@ -402,7 +402,7 @@ body{
   margin-right: 12px;
 }
 .section6-title{
-  font-weight: 642.14;
+  font-weight: 642;
   font-size: 14.68px;
   margin-bottom: 20px;
 }
@@ -423,7 +423,7 @@ body{
   margin-right: 28px;
 }
 .link a{
-text-decoration: none; font-weight: 642.14;
+text-decoration: none; font-weight: 642;
   font-size: 14.68px;
   line-height: 17.76px;
   color: white;
@@ -457,17 +457,13 @@ text-decoration: none; font-weight: 642.14;
     padding: 60px;
   }
   .phone{
-    width: 358.31px;
-    height: 369.95px;
-  }
-  .combine{
-    width: 465.01px;
-    height: 79.73px;
+    width: 358px;
+    height: 369px;
   }
   .title{
     height: 43.12px;
     line-height: 43px;
-    font-weight: 600.14;
+    font-weight: 600;
     font-size: 30px;
     margin-top: 50px;
   }
@@ -481,7 +477,7 @@ text-decoration: none; font-weight: 642.14;
   }
   .description{
     width: 493.52px;
-    font-weight: 600.14;
+    font-weight: 600;
     line-height: 42.82px;
     font-size: 30.69px;
     margin-top: 5px;
@@ -490,7 +486,7 @@ text-decoration: none; font-weight: 642.14;
     background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0px 7px 7px 0px rgba(126, 126, 126, 0.25);
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 20.01px;
     line-height: 25.8px;
     margin-top: 10px;
@@ -513,22 +509,22 @@ text-decoration: none; font-weight: 642.14;
     padding: 10px 8%;
   }
   .section2-combine{
-    width: 796.25px;
-    height: 162.37px;
-    margin: 40px 80px 0px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
   }
   .section2-title{
-    margin-left: 190px;
+    margin: auto;
     margin-bottom: 15px;
-    width: 291.71px;
+    width: 100%;
     height: 43.11px;
-    font-weight: 602.14;
+    font-weight: 602;
     line-height: 43px;
     font-size: 32.69px;
   }
   .section2-content{
-    width: 769.25px;
-    height: 101.82px;
+    width: 100%;
+    height: 100%;
     font-weight: 366.94;
     font-size: 18.35px;
     line-height: 21.5px;
@@ -577,7 +573,7 @@ text-decoration: none; font-weight: 642.14;
     padding: 60px;
   }
   .section3-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 30.69px;
     line-height: 43px;
     height: 43.11px;
@@ -662,7 +658,7 @@ text-decoration: none; font-weight: 642.14;
     padding: 6px 100px;
   }
   .section4-title{
-    font-weight: 642.14;
+    font-weight: 642;
     font-size: 32.69px;
     line-height: 43px;
     color: black;
@@ -679,7 +675,7 @@ text-decoration: none; font-weight: 642.14;
   .activate-button{
     background: linear-gradient(0deg, #5C9DFF, #5C9DFF),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 20.35px;
     line-height: 34.4px;
     border-radius: 25.52px;
@@ -690,7 +686,7 @@ text-decoration: none; font-weight: 642.14;
   .select-server-button{
     background: linear-gradient(0deg, #FFAD4D, #FFAD4D),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 20.35px;
     line-height: 34.4px;
     border-radius: 25.52px;
@@ -701,7 +697,7 @@ text-decoration: none; font-weight: 642.14;
   .download-button{
     background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 20.35px;
     border-radius: 25.52px;
     height: 80px;
@@ -714,7 +710,7 @@ text-decoration: none; font-weight: 642.14;
     height: 762.45px;
   }
   .section5-title{
-    font-weight: 642.14;
+    font-weight: 642;
     font-size: 36.69px;
     line-height: 43px;
     text-align: center;
@@ -727,7 +723,7 @@ text-decoration: none; font-weight: 642.14;
   }
   .started{
     font-size: 20.35px;
-    font-weight: 602.14;
+    font-weight: 602;
     border-radius: 25.52px;
     border: none;
     margin-top: 13px;
@@ -746,7 +742,7 @@ text-decoration: none; font-weight: 642.14;
     margin-bottom: 10px;
   }
   .section5-content-title{
-    font-weight: 682.14;
+    font-weight: 682;
     font-size: 30.35px;
     line-height: 34.4px;
     margin-bottom: 10px;
@@ -784,7 +780,7 @@ text-decoration: none; font-weight: 642.14;
     margin-right: 12px;
   }
   .section6-title{
-    font-weight: 642.14;
+    font-weight: 642;
     font-size: 14.68px;
     margin-bottom: 20px;
   }
@@ -802,7 +798,7 @@ text-decoration: none; font-weight: 642.14;
     margin-right: 28px;
   }
   .link a{
-  text-decoration: none; font-weight: 642.14;
+  text-decoration: none; font-weight: 642;
     font-size: 14.68px;
     line-height: 17.76px;
     color: white;
@@ -837,13 +833,13 @@ text-decoration: none; font-weight: 642.14;
   }
   
   .phone{
-    width: 358.31px;
-    height: 369.95px;
+    width: 358px;
+    height: 369px;
     display: none;
   }
   .title{
     height: 43.12px;
-    font-weight: 642.14;
+    font-weight: 642;
     font-size: 36px;
     margin-top: 60px;
   }
@@ -855,7 +851,7 @@ text-decoration: none; font-weight: 642.14;
   }
   .description{
     width: 493.52px;
-    font-weight: 600.14;
+    font-weight: 600;
     font-size: 30.69px;
     margin-top: 35px;
   }
@@ -863,7 +859,7 @@ text-decoration: none; font-weight: 642.14;
     background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0px 7px 7px 0px rgba(126, 126, 126, 0.25);
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 20.01px;
     line-height: 25.8px;
     margin-top: 10px;
@@ -889,28 +885,28 @@ text-decoration: none; font-weight: 642.14;
     justify-content: center;
   }
   .section2-combine{
-    width: 796.25px;
+    width: 100%;
     height: 182.37px;
-    margin: 40px 10px 0px;
+    margin: auto;
     text-align: center;
   }
   .section2-title{
-    margin-left: 190px;
+    margin: auto;
     margin-bottom: 15px;
-    width: 291.71px;
+    width: 80%;
     height: 43.11px;
-    font-weight: 602.14;
+    font-weight: 602;
     line-height: 43px;
     font-size: 32.69px;
   }
   .section2-content{
-    width: 769.25px;
+    width: 80%;
     height: 101.82px;
     font-weight: 366.94;
     font-size: 18.35px;
     line-height: 21.5px;
     padding: 0px;
-    margin-left: -34px;
+    margin: auto;
   }
   .grid{
     display: grid;
@@ -955,7 +951,7 @@ text-decoration: none; font-weight: 642.14;
     row-gap: 40px;
   }
   .section3-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 30.69px;
     line-height: 43px;
     height: 43.11px;
@@ -1039,7 +1035,7 @@ text-decoration: none; font-weight: 642.14;
     padding: 6px 100px;
   }
   .section4-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 24.69px;
     line-height: 43px;
     color: black;
@@ -1057,7 +1053,7 @@ text-decoration: none; font-weight: 642.14;
   .activate-button{
     background: linear-gradient(0deg, #5C9DFF, #5C9DFF),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 18.35px;
     line-height: 34.4px;
     border-radius: 25.52px;
@@ -1068,7 +1064,7 @@ text-decoration: none; font-weight: 642.14;
   .select-server-button{
     background: linear-gradient(0deg, #FFAD4D, #FFAD4D),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 18.35px;
     line-height: 34.4px;
     border-radius: 25.52px;
@@ -1079,7 +1075,7 @@ text-decoration: none; font-weight: 642.14;
   .download-button{
     background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 18.35px;
     border-radius: 25.52px;
     height: 65px;
@@ -1093,7 +1089,7 @@ text-decoration: none; font-weight: 642.14;
     height: 502.45px;
   }
   .section5-title{
-    font-weight: 642.14;
+    font-weight: 642;
     font-size: 36.69px;
     line-height: 43px;
     text-align: center;
@@ -1106,7 +1102,7 @@ text-decoration: none; font-weight: 642.14;
   }
   .started{
     font-size: 20.35px;
-    font-weight: 602.14;
+    font-weight: 602;
     border-radius: 25.52px;
     border: none;
     margin-top: 11px;
@@ -1125,7 +1121,7 @@ text-decoration: none; font-weight: 642.14;
     margin-bottom: 10px;
   }
   .section5-content-title{
-    font-weight: 682.14;
+    font-weight: 682;
     font-size: 30.35px;
     line-height: 34.4px;
     margin-bottom: 10px;
@@ -1161,8 +1157,8 @@ text-decoration: none; font-weight: 642.14;
   .section1{
     font-family: "Roboto", sans-serif;
     display: flex;
-    justify-content: center;
-    height: 441px;
+    justify-content: start;
+    height: 100%;
     background: linear-gradient(0deg, #0D0C14, #0D0C14),
     radial-gradient(42.09% 62.94% at 68.82% 39.03%, #3cffeb33 0%, rgba(0, 0, 0, 0) 100%);
     background-size: contain;
@@ -1170,35 +1166,41 @@ text-decoration: none; font-weight: 642.14;
     filter: blur(9);
     background-position: center;
   }
-  
+  .contain{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
   .phone{
-    width: 358.31px;
-    height: 369.95px;
+    width: 358px;
+    height: 369px;
     display: none;
   }
   .title{
-    height: 43.12px;
-    font-weight: 642.14;
-    font-size: 36px;
+    height: 60%;
+    width: 100%;
+    font-weight: 642;
+    font-size: 28px;
     margin-top: 60px;
+    margin: auto;
   }
   .content{
     font-size: 25px;
-    font-weight: 340.43;
-    width: 570px;
+    font-weight: 340;
+    width: 100%;
     margin-top: 15px;
   }
   .description{
-    width: 493.52px;
-    font-weight: 600.14;
-    font-size: 30.69px;
-    margin-top: 35px;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 10px;
+    width: 100%;
   }
   .download{
     background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0px 7px 7px 0px rgba(126, 126, 126, 0.25);
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 20.01px;
     line-height: 25.8px;
     margin-top: 10px;
@@ -1208,6 +1210,7 @@ text-decoration: none; font-weight: 642.14;
     border: none;
   }
   .license{
+    width: 60%;
     height: 25.69px;
     font-weight: 366.43;
     font-size: 20.01px;
@@ -1224,28 +1227,27 @@ text-decoration: none; font-weight: 642.14;
     justify-content: center;
   }
   .section2-combine{
-    width: 596.25px;
+    width: 80%;
     height: 182.37px;
-    margin: 40px 10px 0px;
+    margin: auto;
     text-align: center;
   }
   .section2-title{
-    margin-left: 110px;
     margin-bottom: 15px;
-    width: 291.71px;
+    width: 80%;
     height: 43.11px;
-    font-weight: 602.14;
+    font-weight: 602;
     line-height: 43px;
     font-size: 32.69px;
   }
   .section2-content{
-    width: 509.25px;
-    height: 101.82px;
+    width: 80%;
+    height: 100%;
     font-weight: 376.94;
     font-size: 15.35px;
     line-height: 21.5px;
     padding: 0px;
-    margin-left: 4px;
+    margin: auto;
   }
   .grid{
     display: grid;
@@ -1253,8 +1255,8 @@ text-decoration: none; font-weight: 642.14;
     padding-bottom: 0px;
     row-gap: 30px;
     margin-top: 50px;
-    width: 500px;
-    margin-left: 64px;
+    width: 80%;
+    margin: auto;
   }
   .group{
     border: 3px solid white;
@@ -1294,7 +1296,7 @@ text-decoration: none; font-weight: 642.14;
     row-gap: 50px;
   }
   .section3-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 25.69px;
     line-height: 43px;
     height: 43.11px;
@@ -1378,7 +1380,7 @@ text-decoration: none; font-weight: 642.14;
     padding: 0px 0px;
   }
   .section4-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 18.69px;
     line-height: 43px;
     color: black;
@@ -1396,7 +1398,7 @@ text-decoration: none; font-weight: 642.14;
   .activate-button{
     background: linear-gradient(0deg, #5C9DFF, #5C9DFF),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 15.35px;
     line-height: 34.4px;
     border-radius: 25.52px;
@@ -1407,7 +1409,7 @@ text-decoration: none; font-weight: 642.14;
   .select-server-button{
     background: linear-gradient(0deg, #FFAD4D, #FFAD4D),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 18.35px;
     line-height: 34.4px;
     border-radius: 25.52px;
@@ -1419,7 +1421,7 @@ text-decoration: none; font-weight: 642.14;
   .download-button{
     background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 18.35px;
     border-radius: 25.52px;
     height: 45px;
@@ -1435,7 +1437,7 @@ text-decoration: none; font-weight: 642.14;
     padding-left: 12px;
   }
   .section5-title{
-    font-weight: 642.14;
+    font-weight: 642;
     font-size: 26.69px;
     line-height: 43px;
     text-align: center;
@@ -1449,7 +1451,7 @@ text-decoration: none; font-weight: 642.14;
   }
   .started{
     font-size: 18.35px;
-    font-weight: 602.14;
+    font-weight: 602;
     border-radius: 25.52px;
     border: none;
     margin-top: 11px;
@@ -1469,7 +1471,7 @@ text-decoration: none; font-weight: 642.14;
     margin-bottom: 10px;
   }
   .section5-content-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 25.35px;
     line-height: 34.4px;
     margin-bottom: 10px;
@@ -1493,22 +1495,31 @@ text-decoration: none; font-weight: 642.14;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 40px;
-    margin-left: 50px;
+    margin: auto;
+    margin-left: 0px;
+    padding: 20px;
   }
   .cover1{
-    width: 200.9px;
+    width: 80%;
+    margin-right: 0px;
   }
   .cover2{
-    width: 200.24px;
-    margin-right: 12px;
+    width: 80%;
+    margin-right: 0px;
+    margin-left: 0px;
   }
   .cover3{
-    width: 290.81px;
-    margin-right: 12px;
+    width: 80%;
+    margin-right: 0px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .cover4{
-    width: 301.8px;
-    margin-right: 12px;
+    width: 80%;
+    margin-right: 0px;
+    margin-left: 0px;
   }
   .section6{
     height: 460.5px;
@@ -1517,7 +1528,7 @@ text-decoration: none; font-weight: 642.14;
     font-family: "Inter", sans-serif;
   }
   .section6-title{
-    font-weight: 742.14;
+    font-weight: 742;
     font-size: 11.68px;
     margin-bottom: 20px;
   }
@@ -1532,7 +1543,7 @@ text-decoration: none; font-weight: 642.14;
     margin-right: 28px;
   }
   .link a{
-  text-decoration: none; font-weight: 642.14;
+  text-decoration: none; font-weight: 642;
     font-size: 14.68px;
     line-height: 17.76px;
     color: white;
@@ -1574,35 +1585,35 @@ text-decoration: none; font-weight: 642.14;
   }
   
   .phone{
-    width: 358.31px;
-    height: 369.95px;
+    width: 358px;
+    height: 369px;
     display: none;
   }
   .title{
     height: 43.12px;
-    font-weight: 642.14;
+    font-weight: 642;
     font-size: 25px;
     margin-top: 40px;
-    margin-left: 12%;
+    margin: auto;
   }
   .content{
     font-size: 20px;
     font-weight: 340.43;
-    width: 200px;
-    margin: 20px;
+    margin: auto;
   }
   .description{
-    width: 203.52px;
-    font-weight: 600.14;
-    font-size: 8px;
+    font-weight: 600;
+    font-size: 20px;
     margin-top: 35px;
-    margin-left: 0;
+    margin: auto;
+    padding: 0;
+    margin: 0;
   }
   .download{
     background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0px 7px 7px 0px rgba(126, 126, 126, 0.25);
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 20.01px;
     line-height: 25.8px;
     margin-top: 10px;
@@ -1610,15 +1621,16 @@ text-decoration: none; font-weight: 642.14;
     height: 65.13px;
     border-radius: 27.52px;
     border: none;
-    margin-left: 12%;
+    margin: auto;
   }
   .license{
     height: 25.69px;
     font-weight: 366.43;
     font-size: 20.01px;
     line-height: 25.8px;
-    margin-top: 15px;
-    margin-left: 12%;
+    margin-top: 25px;
+    margin: auto;
+    margin: 0;
   }
   .section2{
     background: linear-gradient(0deg, #09080E, #09080E),
@@ -1629,37 +1641,34 @@ text-decoration: none; font-weight: 642.14;
     justify-content: center;
   }
   .section2-combine{
-    width: 596.25px;
-    height: 182.37px;
-    margin: 40px 10px 0px;
+    width: 100%;
+    height: fit-content;
+    margin: 0px auto 15px;
     text-align: center;
   }
   .section2-title{
-    margin-left: 110px;
     margin-bottom: 15px;
-    width: 291.71px;
+    width: 80%;
     height: 43.11px;
-    font-weight: 602.14;
+    font-weight: 602;
     line-height: 43px;
     font-size: 25.69px;
   }
   .section2-content{
-    width: 388.25px;
-    height: 101.82px;
+    height: fit-content;
     font-weight: 376.94;
     font-size: 15.35px;
     line-height: 21.5px;
-    padding: 0px;
-    margin-left: 10%;
+    margin-bottom: 60px;
   }
   .grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-bottom: 0px;
+    padding-bottom: 40px;
     row-gap: 30px;
-    margin-top: 50px;
-    width: 500px;
-    margin-left: 13%;
+    margin-top: 120px;
+    width: 80%;
+    margin: auto;
   }
   .group{
     border: 0px solid white;
@@ -1699,13 +1708,14 @@ text-decoration: none; font-weight: 642.14;
     row-gap: 50px;
   }
   .section3-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 25.69px;
     line-height: 43px;
-    height: 43.11px;
+    height:fit-content;
     padding-top: 32px;
     margin-bottom: 40px;
     text-align: center;
+    width: 100%;
   }
   .section3-content{
     margin-left: -25%;
@@ -1783,7 +1793,7 @@ text-decoration: none; font-weight: 642.14;
     padding: 0px 0px;
   }
   .section4-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 16.69px;
     line-height: 43px;
     color: black;
@@ -1802,7 +1812,7 @@ text-decoration: none; font-weight: 642.14;
   .activate-button{
     background: linear-gradient(0deg, #5C9DFF, #5C9DFF),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 15.35px;
     line-height: 34.4px;
     border-radius: 25.52px;
@@ -1815,7 +1825,7 @@ text-decoration: none; font-weight: 642.14;
   .select-server-button{
     background: linear-gradient(0deg, #FFAD4D, #FFAD4D),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 18.35px;
     line-height: 34.4px;
     border-radius: 25.52px;
@@ -1829,7 +1839,7 @@ text-decoration: none; font-weight: 642.14;
   .download-button{
     background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 18.35px;
     border-radius: 25.52px;
     height: 45px;
@@ -1846,7 +1856,7 @@ text-decoration: none; font-weight: 642.14;
     padding-left: 12px;
   }
   .section5-title{
-    font-weight: 642.14;
+    font-weight: 642;
     font-size: 23.69px;
     line-height: 43px;
     text-align: center;
@@ -1860,7 +1870,7 @@ text-decoration: none; font-weight: 642.14;
   }
   .started{
     font-size: 18.35px;
-    font-weight: 602.14;
+    font-weight: 602;
     border-radius: 25.52px;
     border: none;
     margin-top: 11px;
@@ -1881,7 +1891,7 @@ text-decoration: none; font-weight: 642.14;
     margin-bottom: 10px;
   }
   .section5-content-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 23.35px;
     line-height: 34.4px;
     margin-bottom: 10px;
@@ -1930,7 +1940,7 @@ text-decoration: none; font-weight: 642.14;
     font-family: "Inter", sans-serif;
   }
   .section6-title{
-    font-weight: 742.14;
+    font-weight: 742;
     font-size: 11.68px;
     margin-bottom: 20px;
   }
@@ -1945,7 +1955,7 @@ text-decoration: none; font-weight: 642.14;
     margin-right: 13px;
   }
   .link a{
-  text-decoration: none; font-weight: 642.14;
+  text-decoration: none; font-weight: 642;
     font-size: 14.68px;
     line-height: 17.76px;
     color: white;
@@ -1966,7 +1976,7 @@ text-decoration: none; font-weight: 642.14;
 }
 
  
-@media screen and (max-width:500px) {
+@media screen and (max-width:510px) {
   .header{
     background-color: #1F1E28;
     display: grid;
@@ -1979,51 +1989,47 @@ text-decoration: none; font-weight: 642.14;
     font-family: "Roboto", sans-serif;
     display: flex;
     justify-content: center;
-    height: 441px;
+    height: 100%;
     background: linear-gradient(0deg, #0D0C14, #0D0C14),
     radial-gradient(42.09% 62.94% at 68.82% 39.03%, #3cffeb33 0%, rgba(0, 0, 0, 0) 100%);
     filter: blur(9);
   }
   
   .phone{
-    width: 358.31px;
-    height: 369.95px;
+    width: 358px;
+    height: 369px;
     display: none;
   }
   .title{
-    height: 43.12px;
-    font-weight: 642.14;
-    font-size: 25px;
-    margin-top: 40px;
-    margin-left: 12%;
+    height: fit-content;
+    font-weight: 642;
+    font-size: 20px;
+    margin: auto;
   }
   .content{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 340.43;
-    width: 570px;
-    margin-top: 15px;
-    margin-left: 12%;
+    width:100%;
+    margin: auto;
   }
   .description{
-    width: 493.52px;
-    font-weight: 600.14;
-    font-size: 25.69px;
-    margin-top: 35px;
-    margin-left: 12%;
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    margin: auto;
   }
   .download{
     background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
     box-shadow: 0px 7px 7px 0px rgba(126, 126, 126, 0.25);
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 20.01px;
     line-height: 25.8px;
-    margin-top: 10px;
-    width: 254.56px;
+    width: 80%;
     height: 65.13px;
     border-radius: 27.52px;
     border: none;
-    margin-left: 12%;
+    margin: auto;
   }
   .license{
     height: 25.69px;
@@ -2048,11 +2054,10 @@ text-decoration: none; font-weight: 642.14;
     text-align: center;
   }
   .section2-title{
-    margin-left: 110px;
     margin-bottom: 15px;
-    width: 291.71px;
+    width: 80%;
     height: 43.11px;
-    font-weight: 602.14;
+    font-weight: 602;
     line-height: 43px;
     font-size: 25.69px;
     margin: auto;
@@ -2060,8 +2065,8 @@ text-decoration: none; font-weight: 642.14;
   .section2-content{
     font-weight: 376.94;
     font-size: 15.35px;
-    padding: 0px;
-    margin-left: 4px;
+    padding: 30px;
+    margin: auto;
     width: fit-content;
   }
   .section2-contain{
@@ -2071,21 +2076,19 @@ text-decoration: none; font-weight: 642.14;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-bottom: 0px;
-    width: 200px;
+    width: 100%;
     row-gap: 10px;
-    margin-top: 100px;
-    margin-left: -22px;
+    margin-top: 150px;
   }
   .group{
     border: none;
-    width: 180.5px;
+    width: 100%;
     padding: 45px 0px;
     text-align: center;
     height: 163.3px;
     border-radius: 20px;
     position: relative;
     background: radial-gradient(30% 40% at top, rgba(104, 255, 227, 0.37)  45%, #09080E  100%);
-    margin-top: 10px;
   }
   .group-image-container{
     border-radius: 35.125px;
@@ -2113,7 +2116,7 @@ text-decoration: none; font-weight: 642.14;
     row-gap: 50px;
   }
   .section3-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 25.69px;
     line-height: 43px;
     height: 43.11px;
@@ -2213,7 +2216,7 @@ text-decoration: none; font-weight: 642.14;
     padding: 0px 0px;
   }
   .section4-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 14px;
     color: black;
     margin-left: -15px;
@@ -2231,7 +2234,7 @@ text-decoration: none; font-weight: 642.14;
   .activate-button{
     background: linear-gradient(0deg, #5C9DFF, #5C9DFF),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 15.35px;
     line-height: 34.4px;
     border-radius: 25.52px;
@@ -2251,7 +2254,7 @@ text-decoration: none; font-weight: 642.14;
   .select-server-button{
     background: linear-gradient(0deg, #FFAD4D, #FFAD4D),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 18.35px;
     line-height: 34.4px;
     border-radius: 25.52px;
@@ -2265,7 +2268,7 @@ text-decoration: none; font-weight: 642.14;
   .download-button{
     background: linear-gradient(0deg, #1DFAE5, #1DFAE5),
     radial-gradient(81.69% 566.4% at 24.1% 18.31%, rgba(255, 240, 240, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
-    font-weight: 582.14;
+    font-weight: 582;
     font-size: 18.35px;
     border-radius: 25.52px;
     width: 150px;
@@ -2287,7 +2290,7 @@ text-decoration: none; font-weight: 642.14;
     padding-left: 12px;
   }
   .section5-title{
-    font-weight: 642.14;
+    font-weight: 642;
     font-size: 23.69px;
     line-height: 43px;
     text-align: center;
@@ -2301,7 +2304,7 @@ text-decoration: none; font-weight: 642.14;
   }
   .started{
     font-size: 18.35px;
-    font-weight: 602.14;
+    font-weight: 602;
     border-radius: 25.52px;
     border: none;
     margin-top: 11px;
@@ -2322,7 +2325,7 @@ text-decoration: none; font-weight: 642.14;
     margin-bottom: 10px;
   }
   .section5-content-title{
-    font-weight: 602.14;
+    font-weight: 602;
     font-size: 19.35px;
     margin-bottom: 15px;
     margin: auto;
@@ -2346,15 +2349,12 @@ text-decoration: none; font-weight: 642.14;
   }
   .cover2{
     width: 200.24px;
-    margin-right: 12px;
   }
   .cover3{
     width: 290.81px;
-    margin-right: 12px;
   }
   .cover4{
     width: 301.8px;
-    margin-right: 12px;
   }
   .section6{
     height: 660.5px;
@@ -2363,7 +2363,7 @@ text-decoration: none; font-weight: 642.14;
     font-family: "Inter", sans-serif;
   }
   .section6-title{
-    font-weight: 742.14;
+    font-weight: 742;
     font-size: 11.68px;
     margin-bottom: 20px;
   }
@@ -2374,11 +2374,16 @@ text-decoration: none; font-weight: 642.14;
   .content3,.content4{
     width: 200px;
   }
+  .grid3{
+    display: flex;
+    margin-top: 45px;
+    width: 100%;
+  }
   .link{
     margin-right: 13px;
   }
   .link a{
-  text-decoration: none; font-weight: 642.14;
+  text-decoration: none; font-weight: 642;
     font-size: 14.68px;
     line-height: 17.76px;
     color: white;
