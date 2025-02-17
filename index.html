@@ -11,22 +11,10 @@
       padding: 0;
     }
     body{
-      background:repeating-linear-gradient(45deg, rgba(28, 128, 209, 0.774), rgba(13, 115, 199, 0.801),rgb(0, 255, 242));
+      background:repeating-linear-gradient(145deg, rgba(20, 131, 221, 0.774), rgba(13, 115, 199, 0.801),rgb(0, 255, 242));
       background-repeat: no-repeat;
       background-size: 300% 200%;
       color: lightcyan;
-      animation: color 12s ease-in-out infinite;
-    }
-    @keyframes color {
-      0%{
-        background-position: 0 50%;
-      }
-      50%{
-        background-position: 100% 50%;
-      }
-      100%{
-        background-position: 0 50%;
-      }
     }
     nav{
       height: 50px;
@@ -139,12 +127,12 @@
       box-shadow: 10px 8px 10px rgb(10, 4, 66);
     }
     .link-cover{
-      border: 1px solid rgb(25, 66, 112);
-      box-shadow: 1px 1px 30px  lightcyan inset;
+      border: 1px solid rgb(15, 104, 206);
+      box-shadow: 1px 1px 30px  rgb(18, 19, 19) inset;
       margin: 10px;
       border-radius: 10px;
       padding: 15px;
-      background-color: rgb(25, 106, 112);
+      background-color: rgb(21, 95, 190);
       color:  lightcyan;
       font-size: 1.3rem;
     }
@@ -252,6 +240,11 @@
       font-size: 1.4rem;
       font-weight: 600;
     }
+    @media screen and (max-width:500px) {
+      .embody{
+        margin-left: 120px;
+      }
+    }
   </style>
 </head class="container">
 <body>
@@ -265,7 +258,8 @@
       <div><a href="#Resources" class="link">Resources</a></div>
     </div>
   </nav>
-  <div class="left-nav">Femi Precious</div>
+  <div class="embody">
+    <div class="left-nav">Femi Precious</div>
   <div class="body">
     <div class="image"><img src="IMAGES/Fineboy.jpg" alt="" class="img"></div>
     <div class="content">Student at the University of Lagos situated in Nigeria, pursuing a Computer Engineering degree, which integrate Computer Science with Electrical and Electronics Engineering to develop new Technology.</div>
@@ -394,6 +388,7 @@
       </li>
     </ul> 
     <div>Also make sure you check out some youtube videos to stay Updated.</div>
+  </div>
   </div>
 <script>
   /* var hidden = document.querySelector('.hidden');
