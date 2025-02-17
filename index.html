@@ -11,19 +11,29 @@
       padding: 0;
     }
     body{
-      background: rgb(27, 181, 192);
-      background-size: cover;
+      background:repeating-linear-gradient(45deg, rgba(28, 128, 209, 0.774), rgba(13, 115, 199, 0.801),rgb(0, 255, 242));
       background-repeat: no-repeat;
-      background-position: 300% 300%;
+      background-size: 300% 200%;
       color: lightcyan;
+      animation: color 12s ease-in-out infinite;
+    }
+    @keyframes color {
+      0%{
+        background-position: 0 50%;
+      }
+      50%{
+        background-position: 100% 50%;
+      }
+      100%{
+        background-position: 0 50%;
+      }
     }
     nav{
       height: 50px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin: 20px 100px;
-      color: white;
+      margin: 20px;
     }
     .left-nav{
       font-size: 2rem;
@@ -64,6 +74,12 @@
       margin-right: 30px;
       text-decoration: none;
       color: white;
+      font-size: 1.2rem;
+      background: rgb(17, 169, 196);
+      border: 2px ridge rgb(77, 186, 223);
+      border-radius: 50%;
+      padding: 15px;
+      box-shadow: 10px 8px 10px rgb(6, 2, 37);
     }
     .footer{
       position: relative;
@@ -111,6 +127,16 @@
     }
     .project{
       margin: 100px 15px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      font-weight: 600;
+      background: linear-gradient(rgba(78, 112, 187, 0.767), lightblue);
+      border: 2px ridge rgb(48, 112, 172);
+      border-radius: 50%;
+      padding: 15px;
+      box-shadow: 10px 8px 10px rgb(10, 4, 66);
     }
     .link-cover{
       border: 1px solid rgb(25, 66, 112);
@@ -118,7 +144,7 @@
       margin: 10px;
       border-radius: 10px;
       padding: 15px;
-      background-color: rgb(25, 66, 112);
+      background-color: rgb(25, 106, 112);
       color:  lightcyan;
       font-size: 1.3rem;
     }
@@ -143,6 +169,16 @@
     }
     .Skills{
       margin: 100px 15px 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      font-weight: 600;
+      background: linear-gradient(rgba(78, 112, 187, 0.767), lightblue);
+      border: 2px ridge rgb(48, 112, 172);
+      border-radius: 50%;
+      padding: 15px;
+      box-shadow: 10px 8px 10px rgb(10, 4, 66);
     }
     .skills{
       display: grid;
@@ -163,6 +199,9 @@
       row-gap: 50px;
       } 
     }
+    .title-name{
+      font-size: 1.3rem;
+    }
     .image2{
       margin-left: 15px;
       height: 120px;
@@ -180,6 +219,7 @@
       vertical-align: middle;
       margin-top: 30px;
       margin-left: 10px;
+      font-size: 1.4rem;
     }
     .social{
       display: flex;
@@ -209,6 +249,8 @@
     }
     .media-name{
       margin-top: 32px;
+      font-size: 1.4rem;
+      font-weight: 600;
     }
   </style>
 </head class="container">
@@ -233,7 +275,7 @@
     <div class="intro">Intro</div>
     <div class="aboutme">I was born and raised in Ile-Ife,Osun State. I always aspire to change the world with inventions. I wanted to know how different things are made So I realized I am to be an Engineer. What made me choose Computer Engineering is the technicality and the problem it can solve. I have so many ideas to be implemented in my Company so watch out for  Visual Leaning Centre Company.</div>
   </div>
-  <h2 id="Project" class="project">Project</h2>
+  <div id="Project" class="project">Project</div>
   <div class="hidden" id="scrollTopBtn">
     <a href="#Top"><i class="fa-solid fa-arrow-up-wide-short fa-fade"></i></a>
   </div>
@@ -298,7 +340,7 @@
     </div>
   </div>
   <h2 id="Contact" class="Skills">Contact</h2>
-  <div>You can contact me on any of my social media platform if you need any training on any of the skills I've acquired over the years.</div>
+  <div class="title-name">You can contact me on any of my social media platform if you need any training on any of the skills I've acquired over the years.</div>
   <div class="social-flex">
     <div class="social">
       <div class="social-flexy">
